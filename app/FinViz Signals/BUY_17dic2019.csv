@@ -1,0 +1,50 @@
+"No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
+1,"AEP","American Electric Power Company, Inc.","Utilities","Electric Utilities","USA",45498.18,21.72,93.03,1.06%,2028069
+2,"AIR","AAR Corp.","Industrial Goods","Aerospace/Defense Products & Services","USA",1591.49,19.95,44.97,0.78%,150674
+3,"ALG","Alamo Group Inc.","Industrial Goods","Farm & Construction Machinery","USA",1396.34,21.08,119.04,0.18%,67211
+4,"AMG","Affiliated Managers Group, Inc.","Financial","Asset Management","USA",4333.41,,86.10,1.16%,897316
+5,"ANET","Arista Networks, Inc.","Technology","Diversified Computer Systems","USA",15158.22,20.76,198.64,2.96%,1113747
+6,"AUB","Atlantic Union Bankshares Corporation","Financial","Regional - Mid-Atlantic Banks","USA",3121.50,16.08,38.31,1.16%,272158
+7,"CF","CF Industries Holdings, Inc.","Basic Materials","Agricultural Chemicals","USA",10251.72,20.84,46.88,3.85%,2616202
+8,"CIT","CIT Group Inc.","Financial","Credit Services","USA",4454.43,9.93,46.41,1.24%,1093387
+9,"CL","Colgate-Palmolive Company","Consumer Goods","Personal Products","USA",59138.67,24.68,68.87,0.26%,3028016
+10,"CLGX","CoreLogic, Inc.","Technology","Information Technology Services","USA",3375.68,69.12,42.44,2.07%,660437
+11,"CNA","CNA Financial Corporation","Financial","Property & Casualty Insurance","USA",12218.92,19.11,45.06,1.49%,252939
+12,"CSCO","Cisco Systems, Inc.","Technology","Communication Equipment","USA",196652.32,16.92,45.98,1.50%,21823900
+13,"CTS","CTS Corporation","Technology","Diversified Electronics","USA",940.90,22.31,28.80,0.56%,154145
+14,"ETR","Entergy Corporation","Utilities","Electric Utilities","USA",23696.78,29.80,119.12,0.69%,2508172
+15,"FBC","Flagstar Bancorp, Inc.","Financial","Savings & Loans","USA",2154.42,10.20,37.97,0.72%,332290
+16,"FCN","FTI Consulting, Inc.","Services","Management Services","USA",4165.44,20.26,112.61,0.88%,246120
+17,"GPC","Genuine Parts Company","Services","Auto Parts Stores","USA",15389.53,19.34,105.35,0.18%,743000
+18,"IBKC","IBERIABANK Corporation","Financial","Regional - Southeast Banks","USA",3938.62,10.97,74.68,0.04%,421620
+19,"KELYA","Kelly Services, Inc.","Services","Staffing & Outsourcing Services","USA",862.30,12.40,22.23,0.23%,187568
+20,"L","Loews Corporation","Financial","Property & Casualty Insurance","USA",15334.28,28.39,51.07,0.91%,917848
+21,"MCD","McDonald's Corporation","Services","Restaurants","USA",149716.01,25.86,197.88,0.39%,3642565
+22,"MKSI","MKS Instruments, Inc.","Technology","Scientific & Technical Instruments","USA",6074.19,35.63,109.94,0.56%,429450
+23,"NC","NACCO Industries, Inc.","Consumer Goods","Home Furnishings & Fixtures","USA",348.64,7.91,50.02,2.12%,13566
+24,"NI","NiSource Inc.","Utilities","Diversified Utilities","USA",10164.30,22.11,27.17,1.08%,2742983
+25,"NSP","Insperity, Inc.","Services","Business Services","USA",3329.96,22.24,84.26,1.31%,592194
+26,"NUS","Nu Skin Enterprises, Inc.","Consumer Goods","Personal Products","USA",2206.04,19.10,39.45,1.36%,524650
+27,"NVR","NVR, Inc.","Industrial Goods","Residential Construction","USA",14089.00,17.91,3860.00,1.62%,31845
+28,"OLP","One Liberty Properties, Inc.","Financial","REIT - Diversified","USA",557.15,44.23,28.04,0.97%,84294
+29,"ORA","Ormat Technologies, Inc.","Utilities","Electric Utilities","USA",3920.36,24.99,77.34,0.90%,242236
+30,"OUT","Outfront Media Inc.","Services","Marketing Services","USA",3641.25,24.05,25.49,0.28%,959471
+31,"PB","Prosperity Bancshares, Inc.","Financial","Regional - Southwest  Banks","USA",6835.40,15.12,71.68,0.82%,536497
+32,"PFS","Provident Financial Services, Inc.","Financial","Savings & Loans","USA",1660.25,13.26,25.00,0.64%,212624
+33,"POWI","Power Integrations, Inc.","Technology","Semiconductor - Integrated Circuits","USA",2773.54,58.08,94.21,0.78%,116848
+34,"SABR","Sabre Corporation","Technology","Information Technology Services","USA",6214.42,30.23,22.70,0.78%,1682257
+35,"SAR","Saratoga Investment Corp.","Financial","Diversified Investments","USA",248.42,7.40,25.49,0.39%,51942
+36,"SRDX","Surmodics, Inc.","Healthcare","Diagnostic Substances","USA",575.21,77.39,42.64,4.66%,120851
+37,"TRS","TriMas Corporation","Industrial Goods","Industrial Equipment & Components","USA",1425.70,18.93,31.60,0.52%,146185
+38,"UFCS","United Fire Group, Inc.","Financial","Property & Casualty Insurance","USA",1106.81,143.39,44.45,2.16%,85702
+39,"UGI","UGI Corporation","Utilities","Diversified Utilities","USA",9324.09,30.40,44.50,1.23%,1102132
+40,"UHAL","AMERCO","Services","Rental & Leasing Services","USA",7193.56,19.86,373.11,3.67%,101247
+41,"VRSK","Verisk Analytics, Inc.","Services","Business Services","USA",24486.44,53.73,149.69,0.34%,1405128
+42,"WEC","WEC Energy Group, Inc.","Utilities","Electric Utilities","USA",28584.70,26.22,90.63,1.63%,2223486
+43,"WEX","WEX Inc.","Services","Business Services","USA",8791.83,132.36,204.89,0.74%,180924
+44,"WINA","Winmark Corporation","Services","Specialty Retail, Other","USA",674.15,23.22,176.48,0.16%,17143
+45,"WMT","Walmart Inc.","Services","Discount, Variety Stores","USA",340485.72,23.27,120.54,0.21%,4975714
+46,"WRK","WestRock Company","Consumer Goods","Packaging & Containers","USA",10638.09,12.18,40.90,0.02%,2133276
+47,"XEL","Xcel Energy Inc.","Utilities","Electric Utilities","USA",33310.09,25.23,63.03,1.24%,2835097
+48,"Y","Alleghany Corporation","Financial","Property & Casualty Insurance","USA",11506.39,90.20,796.29,0.20%,43867
+49,"YUM","YUM! Brands, Inc.","Services","Restaurants","USA",30872.34,28.04,100.89,0.78%,1479451
