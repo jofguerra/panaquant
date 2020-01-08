@@ -4,9 +4,6 @@ Created on Tue Nov 19 07:52:20 2019
 
 @author: Nanda
 """
-from openpyxl import load_workbook
-from openpyxl.utils import get_column_interval
-import xlwings as xw
 import re
 import time
 import requests
@@ -14,7 +11,8 @@ import pandas as pd
 import io
 import os
 import inspect
-        
+
+
 def get_data_alphavantage(symbol_list):
     # Update API key here
     api_key = 'VVFJ65QADWRFQDEQ'
@@ -53,6 +51,7 @@ def get_data_alphavantage(symbol_list):
     
     return price_df, data_df, atr_df
 
+
 def green_red(data_df, lookback):
     data_df = data_df.iloc[:lookback,:]
     greens = data_df['close'] > data_df['open']
@@ -61,6 +60,7 @@ def green_red(data_df, lookback):
     red_count = sum(reds)
     
     return green_count, red_count
+
 
 def update_excel():
     # Set working directory    
@@ -127,6 +127,27 @@ def update_excel():
     
     return symbols
 
+
+def update_excel_data():
+    """
+    New function to update the Excel File
+    :return:
+    """
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    excel_path = os.path.join(dir_path, 'data', 'Orders.xlsx')
+
+    input_df = pd.read_excel(excel_path, sheet_name='Trade_Data')
+    symbols = input_df['ticker'].tolist()
+    symbols = symbols[:2]
+    signals = input_df['signal'].tolist()
+
+    price_dfs, data_dfs, atr_dfs = get_data_alphavantage(symbols)
+    for symbol in symbols:
+        price_row = price_dfs[symbol]
+        data_df = data_dfs[symbol]
+        greens, reds = green_red(data_dfs[symbol])
+
+
 def load_workbook_range(range_string, ws):
     col_start, col_end = re.findall("[A-Z]+", range_string)
 
@@ -136,9 +157,10 @@ def load_workbook_range(range_string, ws):
 
     return pd.DataFrame(data_rows, columns=get_column_interval(col_start, col_end))
 
+
 def get_order_pars():
     
-    symbols = update_excel()
+    symbols = update_excel_data()
     
     # Set working directory    
     filename = inspect.getframeinfo(inspect.currentframe()).filename
@@ -160,4 +182,9 @@ def get_order_pars():
         
     return orders_df
 
-orders_df = get_order_pars()
+# -- This is apparently the old entry point
+# orders_df = get_order_pars()
+
+
+if __name__ == '__main__':
+    _ = get_order_pars()

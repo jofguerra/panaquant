@@ -39,15 +39,17 @@ FINISHED = object()
 STARTED = object()
 TIME_OUT = object()
 
-def printWhenExecuting(fn):
-    def fn2(self):
+
+def log_execution(fn):
+    def fun(self):
         print("   doing", fn.__name__)
         fn(self)
         print("   done w/", fn.__name__)
 
-    return fn2
+    return fun
 
-class finishableQueue(object):
+
+class FinishableQueue(object):
 
     def __init__(self, queue_to_finish):
 
@@ -60,8 +62,8 @@ class finishableQueue(object):
         :param timeout: how long to wait before giving up
         :return: list of queue elements
         """
-        contents_of_queue=[]
-        finished=False
+        contents_of_queue = []
+        finished = False
 
         while not finished:
             try:
@@ -71,11 +73,11 @@ class finishableQueue(object):
                     self.status = FINISHED
                 else:
                     contents_of_queue.append(current_element)
-                    ## keep going and try and get more data
+                    # keep going and try and get more data
 
             except queue.Empty:
-                ## If we hit a time out it's most probable we're not getting a finished element any time soon
-                ## give up and return what we have
+                # If we hit a time out it's most probable we're not getting a finished element any time soon
+                # give up and return what we have
                 finished = True
                 self.status = TIME_OUT
 
@@ -83,7 +85,8 @@ class finishableQueue(object):
 
     def timed_out(self):
         return self.status is TIME_OUT
-    
+
+
 class TestWrapper(EWrapper):
     """
     The wrapper deals with the action coming back from the IB gateway or TWS instance
@@ -95,9 +98,9 @@ class TestWrapper(EWrapper):
         self._my_contract_details = {}
         self._my_historic_data_dict = {}
 
-    ## error handling code
+    # error handling code
     def init_error(self):
-        error_queue=queue.Queue()
+        error_queue = queue.Queue()
         self._my_errors = error_queue
 
     def get_error(self, timeout=5):
@@ -114,18 +117,18 @@ class TestWrapper(EWrapper):
         return an_error_if
 
     def error(self, id, errorCode, errorString):
-        ## Overriden method
+        # Overriden method
         errormsg = "IB error id %d errorcode %d string %s" % (id, errorCode, errorString)
         self._my_errors.put(errormsg)
 
-    ## get contract details code
+    # get contract details code
     def init_contractdetails(self, reqId):
         contract_details_queue = self._my_contract_details[reqId] = queue.Queue()
 
         return contract_details_queue
 
     def contractDetails(self, reqId, contractDetails):
-        ## overridden method
+        # overridden method
 
         if reqId not in self._my_contract_details.keys():
             self.init_contractdetails(reqId)
@@ -133,13 +136,16 @@ class TestWrapper(EWrapper):
         self._my_contract_details[reqId].put(contractDetails)
 
     def contractDetailsEnd(self, reqId):
-        ## overriden method
+        # overriden method
         if reqId not in self._my_contract_details.keys():
             self.init_contractdetails(reqId)
 
         self._my_contract_details[reqId].put(FINISHED)
 
-DEFAULT_GET_CONTRACT_ID=43
+
+DEFAULT_GET_CONTRACT_ID = 43
+
+
 class TestClient(EClient):
     """
     The client method
@@ -149,24 +155,22 @@ class TestClient(EClient):
         ## Set up with a wrapper inside
         EClient.__init__(self, wrapper)
 
-
     def resolve_ib_contract(self, ibcontract, reqId=DEFAULT_GET_CONTRACT_ID):
-
         """
         From a partially formed contract, returns a fully fledged version
         :returns fully resolved IB contract
         """
 
-        ## Make a place to store the data we're going to return
-        contract_details_queue = finishableQueue(self.init_contractdetails(reqId))
+        # Make a place to store the data we're going to return
+        contract_details_queue = FinishableQueue(self.init_contractdetails(reqId))
 
         print("Getting full contract details from the server... ")
 
         self.reqContractDetails(reqId, ibcontract)
 
-        ## Run until we get a valid contract(s) or get bored waiting
+        # Run until we get a valid contract(s) or get bored waiting
         MAX_WAIT_SECONDS = 10
-        new_contract_details = contract_details_queue.get(timeout = MAX_WAIT_SECONDS)
+        new_contract_details = contract_details_queue.get(timeout=MAX_WAIT_SECONDS)
 
         while self.wrapper.is_error():
             print(self.get_error())
@@ -186,7 +190,8 @@ class TestClient(EClient):
         resolved_ibcontract=new_contract_details.contract
 
         return resolved_ibcontract
-    
+
+
 class TestApp(TestWrapper, TestClient):
     def __init__(self):
         TestWrapper.__init__(self)
@@ -276,8 +281,8 @@ class TestApp(TestWrapper, TestClient):
     def BracketOrder(self, parentOrderId:int, action:str, quantity:float,
                      parentOrderPrice:float, takeProfitLimitPrice:float,
                      stopLossPrice:float, contract, ordertype, trailingPercent=0, trailAmount=0):
-    
-        #This will be our main or "parent" order
+
+        # This will be our main or "parent" order
         parent = Order()
         parent.orderId = parentOrderId
         parent.action = action
@@ -294,8 +299,8 @@ class TestApp(TestWrapper, TestClient):
                 parent.lmtPrice = round(parentOrderPrice + trailAmount, 1)
             elif action == 'SELL':
                 parent.lmtPrice = round(parentOrderPrice - trailAmount, 1)
-        #The parent and children orders will need this attribute set to False to prevent accidental executions.
-        #The LAST CHILD will have it set to True, 
+        # The parent and children orders will need this attribute set to False to prevent accidental executions.
+        # The LAST CHILD will have it set to True,
         parent.transmit = False
         
         takeProfit = Order()
@@ -313,12 +318,14 @@ class TestApp(TestWrapper, TestClient):
         stopLoss.action = "SELL" if action == "BUY" else "BUY"
         stopLoss.orderType = "STP"
         stopLoss.tif = "GTC"
-        #Stop trigger price
+        # Stop trigger price
         stopLoss.auxPrice = stopLossPrice
         stopLoss.totalQuantity = quantity
         stopLoss.parentId = parentOrderId
-        #In this case, the low side order will be the last child being sent. Therefore, it needs to set this attribute to True 
-        #to activate all its predecessors
+
+        # In this case, the low side order will be the last child being sent.
+        # Therefore, it needs to set this attribute to True
+        # to activate all its predecessors
         stopLoss.transmit = True
 
         bracketOrder = [parent, takeProfit, stopLoss]
