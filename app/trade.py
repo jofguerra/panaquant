@@ -12,6 +12,7 @@ import io
 import os
 import inspect
 
+LOOKBACK_DAYS = 10
 
 def get_data_alphavantage(symbol_list):
     # Update API key here
@@ -134,18 +135,43 @@ def update_excel_data():
     :return:
     """
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    excel_path = os.path.join(dir_path, 'data', 'Orders.xlsx')
+    input_excel_path = os.path.join(dir_path, 'data', 'Input.xlsx')
+    output_excel_path = os.path.join(dir_path, 'data', 'Output.xlsx')
 
-    input_df = pd.read_excel(excel_path, sheet_name='Trade_Data')
+    input_df = pd.read_excel(input_excel_path, sheet_name='Trade_Data')
     symbols = input_df['ticker'].tolist()
     symbols = symbols[:2]
     signals = input_df['signal'].tolist()
+    signals = signals[:2]
 
     price_dfs, data_dfs, atr_dfs = get_data_alphavantage(symbols)
-    for symbol in symbols:
-        price_row = price_dfs[symbol]
-        data_df = data_dfs[symbol]
-        greens, reds = green_red(data_dfs[symbol])
+
+    updated_data = []
+    for tpl in zip(symbols, signals):
+        symbol = tpl[0]
+        signal = tpl[1]
+        price_series = price_dfs[symbol]
+        atr_df = atr_dfs[symbol]
+        print(atr_df)
+        price = price_series.iloc[0]
+        atr = atr_df['ATR'].iloc[0]
+        greens, reds = green_red(data_dfs[symbol], LOOKBACK_DAYS)
+        updated_data.append({'signal': signal,
+                             'symbol': symbol,
+                             'price': price,
+                             'atr': atr,
+                             'lookback': LOOKBACK_DAYS,
+                             'greens': greens,
+                             'reds': reds})
+
+    updated_df = pd.DataFrame(updated_data)
+    with pd.ExcelWriter(output_excel_path) as writer:
+        updated_df.to_excel(writer, sheet_name='New_Trade_data')
+
+    import sys
+    sys.exit()
+
+    return symbols
 
 
 def load_workbook_range(range_string, ws):
