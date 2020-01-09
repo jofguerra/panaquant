@@ -7,6 +7,7 @@ Created on Tue Nov 19 07:52:20 2019
 import re
 import time
 import requests
+import numpy as np
 import pandas as pd
 import io
 import os
@@ -63,70 +64,9 @@ def green_red(data_df, lookback):
     return green_count, red_count
 
 
-def update_excel():
-    # Set working directory    
-    filename = inspect.getframeinfo(inspect.currentframe()).filename
-    os.chdir(os.path.dirname(os.path.abspath(filename)))
-    
-    excel = 'OrdersFinal_new.xlsx'
-    
-    wb = load_workbook(excel)
-    sheet = wb.active
-    
-    inputs = {}
-    for row in sheet.iter_rows():
-        for entry in row:
-            try:
-                if 'Order Size' in entry.value:
-                    inputs['Order Size'] = entry.offset(row=1).value
-                elif 'SL (xATR)' in entry.value:
-                    inputs['SL'] = entry.offset(row=1).value
-                elif 'TP' in entry.value:
-                    inputs['TP'] = entry.offset(row=1).value
-                elif 'Stop (xATR)' in entry.value:
-                    inputs['STP'] = entry.offset(row=1).value
-                elif 'Trail (xATR)' in entry.value:
-                    inputs['Trail'] = entry.offset(row=1).value
-                elif 'Lookback (days)' in entry.value:
-                    inputs['Lookback'] = entry.offset(row=1).value
-            
-            except (AttributeError, TypeError):
-                continue
-            
-    symbols = []
-    signals = []
-    for row in range(2, sheet.max_row+1):
-        symbols.append(sheet['B' + str(row)].value)
-        signals.append(sheet['A' + str(row)].value)    
-    symbols = [x for x in symbols if x != None]
-    signals = [x for x in signals if x != None]
-    
-    price_df, data_df, atr_df = get_data_alphavantage(symbols)
-    
-    price_list = []
-    atr_list = []
-    green_list = []
-    red_list = []
-    for i in range(len(symbols)):
-        symbol = symbols[i]
-        price_list.append(price_df[symbols[i]].iloc[0])
-        atr_list.append(atr_df[symbols[i]].loc[:,'ATR'].iloc[0])
-        greens, reds = green_red(data_df[symbol], inputs['Lookback'])
-        green_list.append(greens)
-        red_list.append(reds)
-    
-    for i in range(len(symbols)):
-        sheet['C' + str(i+2)] = price_list[i]
-        sheet['D' + str(i+2)] = atr_list[i]
-        sheet['J' + str(i+2)] = green_list[i]
-        sheet['K' + str(i+2)] = red_list[i]
-    wb.save(excel)
-    
-    wb = xw.Book(excel)
-    wb.save()
-    wb.close()
-    
-    return symbols
+def get_project_file_path(file_name):
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    return os.path.join(dir_path, 'data', file_name)
 
 
 def update_excel_data():
@@ -134,11 +74,11 @@ def update_excel_data():
     New function to update the Excel File
     :return:
     """
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    input_excel_path = os.path.join(dir_path, 'data', 'Input.xlsx')
-    output_excel_path = os.path.join(dir_path, 'data', 'Output.xlsx')
+    input_excel_path = get_project_file_path('Input.xlsx')
+    output_excel_path = get_project_file_path('Output.xlsx')
 
     input_df = pd.read_excel(input_excel_path, sheet_name='Trade_Data')
+    trade_config = pd.read_excel(input_excel_path, sheet_name='Trade_Config')
     symbols = input_df['ticker'].tolist()
     symbols = symbols[:2]
     signals = input_df['signal'].tolist()
@@ -166,50 +106,46 @@ def update_excel_data():
 
     updated_df = pd.DataFrame(updated_data)
     with pd.ExcelWriter(output_excel_path) as writer:
-        updated_df.to_excel(writer, sheet_name='New_Trade_data')
+        updated_df.to_excel(writer, sheet_name='New_Trade_Data')
 
-    import sys
-    sys.exit()
-
-    return symbols
-
-
-def load_workbook_range(range_string, ws):
-    col_start, col_end = re.findall("[A-Z]+", range_string)
-
-    data_rows = []
-    for row in ws[range_string]:
-        data_rows.append([cell.value for cell in row])
-
-    return pd.DataFrame(data_rows, columns=get_column_interval(col_start, col_end))
+    return symbols, trade_config
 
 
 def get_order_pars():
     
-    symbols = update_excel_data()
+    symbols, trade_config_df = update_excel_data()
     
-    # Set working directory    
-    filename = inspect.getframeinfo(inspect.currentframe()).filename
-    os.chdir(os.path.dirname(os.path.abspath(filename)))
-    
-    excel = 'OrdersFinal_new.xlsx'
-    
-    wb = load_workbook(excel, data_only = True)
-    sheet = wb.active
+    excel_file = get_project_file_path('Output.xlsx')
+    orders_df = pd.read_excel(excel_file, sheet_name='New_Trade_Data')
 
-    orders_df = load_workbook_range('A1:K' + str(len(symbols) + 1), sheet)
-    orders_df.columns = orders_df.iloc[0,:]
-    orders_df = orders_df.iloc[1:,:]
-    
-    for i in range(2, orders_df.shape[1]):
-        orders_df.iloc[:,i] = orders_df.iloc[:,i].astype(float)
-        orders_df.iloc[:,i] = round(orders_df.iloc[:,i], 2)
-    orders_df['QTY'] = round(orders_df['QTY'])
-        
+    trade_config = trade_config_df.to_dict('records')[0]
+
+    orders_df['quantity'] = round(trade_config['order_size']/orders_df['price'])
+
+    orders_df['stop_price'] = np.where(
+        orders_df['signal'] == 'BUY',
+        orders_df['price'] + orders_df['atr'] * trade_config['stop_atr'],
+        orders_df['price'] - orders_df['atr'] * trade_config['stop_atr']
+    )
+
+    orders_df['trail_amount'] = orders_df['atr'] * trade_config['trail_atr']
+
+    orders_df['stop_loss'] = np.where(
+        orders_df['signal'] == 'BUY',
+        orders_df['stop_price'] + orders_df['atr'] * trade_config['sl_atr'],
+        orders_df['stop_price'] - orders_df['atr'] * trade_config['sl_atr']
+    )
+
+    orders_df['take_profit'] = np.where(
+        orders_df['signal'] == 'BUY',
+        orders_df['stop_price'] + orders_df['atr'] * trade_config['tp_atr'],
+        orders_df['stop_price'] - orders_df['atr'] * trade_config['tp_atr']
+    )
+
+    with pd.ExcelWriter(excel_file) as writer:
+        orders_df.to_excel(writer, sheet_name='Orders')
+
     return orders_df
-
-# -- This is apparently the old entry point
-# orders_df = get_order_pars()
 
 
 if __name__ == '__main__':
