@@ -80,9 +80,7 @@ def update_excel_data():
     input_df = pd.read_excel(input_excel_path, sheet_name='Trade_Data')
     trade_config = pd.read_excel(input_excel_path, sheet_name='Trade_Config')
     symbols = input_df['ticker'].tolist()
-    symbols = symbols[:2]
     signals = input_df['signal'].tolist()
-    signals = signals[:2]
 
     price_dfs, data_dfs, atr_dfs = get_data_alphavantage(symbols)
 
