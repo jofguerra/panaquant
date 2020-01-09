@@ -79,8 +79,11 @@ def update_excel_data():
 
     input_df = pd.read_excel(input_excel_path, sheet_name='Trade_Data')
     trade_config = pd.read_excel(input_excel_path, sheet_name='Trade_Config')
+
     symbols = input_df['ticker'].tolist()
+    symbols = symbols[:1]
     signals = input_df['signal'].tolist()
+    signals = signals[:1]
 
     price_dfs, data_dfs, atr_dfs = get_data_alphavantage(symbols)
 
@@ -94,7 +97,7 @@ def update_excel_data():
         atr = atr_df['ATR'].iloc[0]
         greens, reds = green_red(data_dfs[symbol], LOOKBACK_DAYS)
         updated_data.append({'signal': signal,
-                             'symbol': symbol,
+                             'ticker': symbol,
                              'price': price,
                              'atr': atr,
                              'lookback': LOOKBACK_DAYS,
@@ -140,6 +143,8 @@ def get_order_pars():
     )
 
     orders_df['order_type'] = trade_config['order_type']
+
+    orders_df = orders_df.round(1)
 
     with pd.ExcelWriter(excel_file) as writer:
         orders_df.to_excel(writer, sheet_name='Orders')

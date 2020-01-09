@@ -333,7 +333,7 @@ class TestApp(TestWrapper, TestClient):
     def get_orders(self):
         from trade import get_project_file_path
         excel_path = get_project_file_path('Output.xlsx')
-        order_df = pd.read_excel(excel_path, sheet_name='Order_Data')
+        order_df = pd.read_excel(excel_path, sheet_name='Orders')
         return order_df, order_df['order_type'].iloc[0]
 
     def start(self):
