@@ -92,7 +92,6 @@ def update_excel_data():
         signal = tpl[1]
         price_series = price_dfs[symbol]
         atr_df = atr_dfs[symbol]
-        print(atr_df)
         price = price_series.iloc[0]
         atr = atr_df['ATR'].iloc[0]
         greens, reds = green_red(data_dfs[symbol], LOOKBACK_DAYS)
@@ -141,6 +140,8 @@ def get_order_pars():
         orders_df['stop_price'] + orders_df['atr'] * trade_config['tp_atr'],
         orders_df['stop_price'] - orders_df['atr'] * trade_config['tp_atr']
     )
+
+    orders_df['order_type'] = trade_config['order_type']
 
     with pd.ExcelWriter(excel_file) as writer:
         orders_df.to_excel(writer, sheet_name='Orders')

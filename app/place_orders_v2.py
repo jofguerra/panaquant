@@ -19,9 +19,6 @@ import numpy as np
 import os
 import inspect
 
-from openpyxl import load_workbook
-from openpyxl.utils import get_column_interval
-import xlwings as xw
 import re
 import time
 import requests
@@ -332,54 +329,15 @@ class TestApp(TestWrapper, TestClient):
         
         for o in bracketOrder:
             self.placeOrder(o.orderId, contract, o)
-    
-    def load_workbook_range(self, range_string, ws):
-        col_start, col_end = re.findall("[A-Z]+", range_string)
-    
-        data_rows = []
-        for row in ws[range_string]:
-            data_rows.append([cell.value for cell in row])
-    
-        return pd.DataFrame(data_rows, columns=get_column_interval(col_start, col_end))
-    
-    def get_order_pars(self):
-        
-        excel = 'OrdersFinal_new.xlsx'
-        
-        if excel in [i.fullname for i in xw.books]:
-            wb = xw.Book(excel)
-            wb.close()
-        
-        wb = load_workbook(excel, data_only=True)
-        sheet = wb.active
-        
-        symbols = []
-        for row in range(2, sheet.max_row+1):
-            symbols.append(sheet['B' + str(row)].value)
-        symbols = [x for x in symbols if x != None]
-        
-        orders_df = self.load_workbook_range('A1:K' + str(len(symbols) + 1), sheet)
-        orders_df.columns = orders_df.iloc[0,:]
-        orders_df = orders_df.iloc[1:,:]
-        
-        for i in range(2, orders_df.shape[1]):
-            orders_df.iloc[:,i] = orders_df.iloc[:,i].astype(float)
-            orders_df.iloc[:,i] = round(orders_df.iloc[:,i], 2)
-        orders_df['QTY'] = round(orders_df['QTY'])
-        
-        ordertype = ''
-        for row in sheet.iter_rows():
-            for entry in row:
-                try:
-                    if 'Order Type' in entry.value:
-                        ordertype = entry.offset(row=1).value
-                except:
-                    continue
-                
-        return orders_df, ordertype
-    
+
+    def get_orders(self):
+        from trade import get_project_file_path
+        excel_path = get_project_file_path('Output.xlsx')
+        order_df = pd.read_excel(excel_path, sheet_name='Order_Data')
+        return order_df, order_df['order_type'].iloc[0]
+
     def start(self):
-        orders_df, ordertype = self.get_order_pars()
+        orders_df, ordertype = self.get_orders()
         self.place_orders(orders_df, ordertype)
         
     def stop(self):
@@ -397,21 +355,21 @@ class TestApp(TestWrapper, TestClient):
             symbol = orders_df['ticker'].iloc[i].upper()
             try:
                 signal = orders_df['signal'].iloc[i].upper()
-                quantity = int(round(orders_df['QTY'].iloc[i], 0))
-                SLPrice = orders_df['SL'].iloc[i]
-                TPPrice = orders_df['TP'].iloc[i]
+                quantity = int(round(orders_df['quantity'].iloc[i], 0))
+                SLPrice = orders_df['stop_loss'].iloc[i]
+                TPPrice = orders_df['take_profit'].iloc[i]
                 
                 contract = self.defineContract(symbol, 'STK', 'SMART', 'USD', 'NYSE')
                 
                 if ordertype == 'TRAIL':
-                    trailStopPrice = orders_df['STP Price'].iloc[i]
-                    trailingPercent = round(orders_df['Trail AMT'].iloc[i] / trailStopPrice, 4)*100
+                    trailStopPrice = orders_df['stop_price'].iloc[i]
+                    trailingPercent = round(orders_df['trail_amount'].iloc[i] / trailStopPrice, 4)*100
                     self.BracketOrder(self.nextoid(), signal, quantity, trailStopPrice,
                                       TPPrice, SLPrice, contract, ordertype, trailingPercent)
                     self.nextValidOrderId += 2
                 else:
-                    StopPrice = orders_df['STP Price'].iloc[i]
-                    lmtAmount = orders_df['Trail AMT'].iloc[i]
+                    StopPrice = orders_df['stop_price'].iloc[i]
+                    lmtAmount = orders_df['trail_amount'].iloc[i]
                     self.BracketOrder(self.nextoid(), signal, quantity, StopPrice,
                                       TPPrice, SLPrice, contract, ordertype, trailAmount = lmtAmount)
                     self.nextValidOrderId += 2
