@@ -15,6 +15,7 @@ import inspect
 
 LOOKBACK_DAYS = 10
 
+
 def get_data_alphavantage(symbol_list):
     # Update API key here
     api_key = 'VVFJ65QADWRFQDEQ'
@@ -81,9 +82,7 @@ def update_excel_data():
     trade_config = pd.read_excel(input_excel_path, sheet_name='Trade_Config')
 
     symbols = input_df['ticker'].tolist()
-    symbols = symbols[:1]
     signals = input_df['signal'].tolist()
-    signals = signals[:1]
 
     price_dfs, data_dfs, atr_dfs = get_data_alphavantage(symbols)
 
@@ -111,8 +110,34 @@ def update_excel_data():
     return symbols, trade_config
 
 
+def read_finviz_data():
+    buy_csv = get_project_file_path('BUY.csv')
+    sell_csv = get_project_file_path('SELL.csv')
+    buy_df = pd.read_csv(buy_csv)
+    sell_df = pd.read_csv(sell_csv)
+    columns = ['signal', 'symbol']
+    buy_df['signal'] = 'BUY'
+    sell_df['signal'] = 'SELL'
+    buy_df['symbol'] = buy_df['Ticker']
+    sell_df['symbol'] = sell_df['Ticker']
+    return buy_df[columns], sell_df[columns]
+
+
+def create_input_excel(buy_df, sell_df):
+    input_df = pd.concat([buy_df, sell_df], ignore_index=True)
+    input_excel_path = get_project_file_path('Input.xlsx')
+    input_df = pd.read_excel(input_excel_path, sheet_name='Trade_Data')
+    trade_config = pd.read_excel(input_excel_path, sheet_name='Trade_Config')
+    with pd.ExcelWriter(input_excel_path) as writer:
+        input_df.to_excel(writer, sheet_name='New_Trade_Data')
+        trade_config.to_excel(writer, sheet_name='Trade_Config')
+
+
 def get_order_pars():
-    
+    buy_df, sell_df = read_finviz_data()
+    create_input_excel(buy_df, sell_df)
+    import sys
+    sys.exit()
     symbols, trade_config_df = update_excel_data()
     
     excel_file = get_project_file_path('Output.xlsx')
