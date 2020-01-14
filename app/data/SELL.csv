@@ -1,20 +1,19 @@
 "No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
-1,"AAXN","Axon Enterprise, Inc.","Industrial Goods","Aerospace/Defense Products & Services","USA",4225.38,263.41,68.75,-7.00%,1721840
-2,"AKCA","Akcea Therapeutics, Inc.","Healthcare","Biotechnology","USA",1584.00,,16.70,-0.71%,264415
-3,"APRN","Blue Apron Holdings, Inc.","Services","Specialty Retail, Other","USA",82.82,,6.09,-1.14%,190115
-4,"ARWR","Arrowhead Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",6100.41,85.52,59.44,-3.45%,1818553
-5,"CDZI","Cadiz Inc.","Utilities","Water Utilities","USA",284.76,,10.35,-3.58%,236544
-6,"CONN","Conn's, Inc.","Services","Electronics Stores","USA",333.68,4.37,11.53,-0.69%,1456853
-7,"CORT","Corcept Therapeutics Incorporated","Healthcare","Biotechnology","USA",1355.49,16.92,11.93,-1.65%,837372
-8,"CURO","CURO Group Holdings Corp.","Financial","Credit Services","USA",444.39,8.53,10.40,-8.37%,613474
-9,"CVGW","Calavo Growers, Inc.","Consumer Goods","Farm Products","USA",1495.65,41.19,85.76,-2.52%,221266
-10,"DLX","Deluxe Corporation","Services","Business Services","USA",2071.86,,48.83,-1.05%,246638
-11,"EBIX","Ebix, Inc.","Technology","Business Software & Services","USA",1004.28,11.72,32.67,-1.54%,272646
-12,"EVER","EverQuote, Inc.","Financial","Regional - Southeast Banks","USA",783.56,,30.56,-11.27%,860031
-13,"KMX","CarMax, Inc.","Services","Auto Dealerships","USA",14626.14,16.88,87.05,-0.24%,1300045
-14,"LAD","Lithia Motors, Inc.","Services","Auto Dealerships","USA",3320.98,13.41,141.68,-3.04%,229218
-15,"OPTN","OptiNose, Inc.","Healthcare","Drugs - Generic","USA",345.93,,8.02,-1.78%,270870
-16,"SAH","Sonic Automotive, Inc.","Services","Auto Dealerships","USA",1311.41,10.69,29.69,-3.35%,554948
-17,"SNBR","Sleep Number Corporation","Consumer Goods","Home Furnishings & Fixtures","USA",1342.89,17.71,46.10,-1.43%,423288
-18,"VC","Visteon Corporation","Consumer Goods","Auto Parts","USA",2441.41,28.22,86.33,-2.85%,258290
-19,"WU","The Western Union Company","Financial","Credit Services","USA",10875.10,9.84,25.85,-0.96%,8006936
+1,"AMSC","American Superconductor Corporation","Industrial Goods","Industrial Electrical Equipment","USA",161.09,24.88,7.24,-2.16%,295350
+2,"ANIK","Anika Therapeutics, Inc.","Healthcare","Biotechnology","USA",715.13,23.01,49.80,-0.66%,185368
+3,"APRN","Blue Apron Holdings, Inc.","Services","Specialty Retail, Other","USA",74.79,,5.35,-5.81%,398549
+4,"CMD","Cantel Medical Corp.","Healthcare","Medical Instruments & Supplies","USA",2777.57,63.67,64.37,-1.32%,394053
+5,"EBIX","Ebix, Inc.","Technology","Business Software & Services","USA",988.76,11.34,31.60,-2.53%,299457
+6,"EHTH","eHealth, Inc.","Financial","Insurance Brokers","USA",2180.51,834.50,92.63,-1.90%,1022336
+7,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1189.93,26.50,58.82,-2.50%,216699
+8,"GATX","GATX Corporation","Services","Rental & Leasing Services","USA",2840.94,15.81,80.48,-0.58%,209643
+9,"HBI","Hanesbrands Inc.","Consumer Goods","Textile - Apparel Clothing","USA",5081.77,8.74,13.84,-1.49%,7484546
+10,"MPAA","Motorcar Parts of America, Inc.","Consumer Goods","Auto Parts","USA",389.45,,20.53,-0.05%,222215
+11,"NYT","The New York Times Company","Services","Publishing - Newspapers","USA",5233.44,41.83,31.25,-0.86%,1259173
+12,"OLLI","Ollie's Bargain Outlet Holdings, Inc.","Services","Discount, Variety Stores","USA",3744.65,27.11,57.77,-1.79%,1074786
+13,"PTLA","Portola Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1925.15,,14.76,-40.34%,19819518
+14,"TISI","Team, Inc.","Services","Business Services","USA",464.64,,15.12,-1.18%,134495
+15,"TRUP","Trupanion, Inc.","Financial","Accident & Health Insurance","USA",1204.85,,31.23,-9.43%,592182
+16,"UI","Ubiquiti Inc.","Technology","Communication Equipment","USA",12090.36,29.46,184.22,-1.19%,152080
+17,"WDFC","WD-40 Company","Basic Materials","Specialty Chemicals","USA",2628.96,39.93,185.53,-3.27%,393559
+18,"WWE","World Wrestling Entertainment, Inc.","Services","Entertainment - Diversified","USA",5001.46,115.82,60.69,-4.68%,2207350

@@ -338,14 +338,16 @@ def run_app():
     app.connect('127.0.0.1', 7497, cid)
     
     app.run()
-         
-schedule.every().monday.at("10:15").do(run_app)
-schedule.every().tuesday.at("13:00").do(run_app)
-schedule.every().wednesday.at("13:00").do(run_app)
-schedule.every().thursday.at("13:00").do(run_app)
-schedule.every().friday.at("12:39").do(run_app)
-schedule.every().saturday.at("15:49").do(run_app)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+if __name__ == '__main__':
+    run_app()
+# schedule.every().monday.at("10:15").do(run_app)
+# schedule.every().tuesday.at("13:00").do(run_app)
+# schedule.every().wednesday.at("13:00").do(run_app)
+# schedule.every().thursday.at("13:00").do(run_app)
+# schedule.every().friday.at("12:39").do(run_app)
+# schedule.every().saturday.at("15:49").do(run_app)
+#
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
