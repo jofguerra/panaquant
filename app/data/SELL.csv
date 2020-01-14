@@ -1,19 +1,20 @@
 "No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
-1,"AMSC","American Superconductor Corporation","Industrial Goods","Industrial Electrical Equipment","USA",161.09,24.88,7.24,-2.16%,295350
-2,"ANIK","Anika Therapeutics, Inc.","Healthcare","Biotechnology","USA",715.13,23.01,49.80,-0.66%,185368
-3,"APRN","Blue Apron Holdings, Inc.","Services","Specialty Retail, Other","USA",74.79,,5.35,-5.81%,398549
-4,"CMD","Cantel Medical Corp.","Healthcare","Medical Instruments & Supplies","USA",2777.57,63.67,64.37,-1.32%,394053
-5,"EBIX","Ebix, Inc.","Technology","Business Software & Services","USA",988.76,11.34,31.60,-2.53%,299457
-6,"EHTH","eHealth, Inc.","Financial","Insurance Brokers","USA",2180.51,834.50,92.63,-1.90%,1022336
-7,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1189.93,26.50,58.82,-2.50%,216699
-8,"GATX","GATX Corporation","Services","Rental & Leasing Services","USA",2840.94,15.81,80.48,-0.58%,209643
-9,"HBI","Hanesbrands Inc.","Consumer Goods","Textile - Apparel Clothing","USA",5081.77,8.74,13.84,-1.49%,7484546
-10,"MPAA","Motorcar Parts of America, Inc.","Consumer Goods","Auto Parts","USA",389.45,,20.53,-0.05%,222215
-11,"NYT","The New York Times Company","Services","Publishing - Newspapers","USA",5233.44,41.83,31.25,-0.86%,1259173
-12,"OLLI","Ollie's Bargain Outlet Holdings, Inc.","Services","Discount, Variety Stores","USA",3744.65,27.11,57.77,-1.79%,1074786
-13,"PTLA","Portola Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1925.15,,14.76,-40.34%,19819518
-14,"TISI","Team, Inc.","Services","Business Services","USA",464.64,,15.12,-1.18%,134495
-15,"TRUP","Trupanion, Inc.","Financial","Accident & Health Insurance","USA",1204.85,,31.23,-9.43%,592182
-16,"UI","Ubiquiti Inc.","Technology","Communication Equipment","USA",12090.36,29.46,184.22,-1.19%,152080
-17,"WDFC","WD-40 Company","Basic Materials","Specialty Chemicals","USA",2628.96,39.93,185.53,-3.27%,393559
-18,"WWE","World Wrestling Entertainment, Inc.","Services","Entertainment - Diversified","USA",5001.46,115.82,60.69,-4.68%,2207350
+1,"ABMD","Abiomed, Inc.","Healthcare","Medical Appliances & Equipment","USA",7618.12,35.11,168.10,-11.09%,3968041
+2,"APRN","Blue Apron Holdings, Inc.","Services","Specialty Retail, Other","USA",70.46,,5.04,-5.79%,462075
+3,"AVRO","AVROBIO, Inc.","Healthcare","Biotechnology","USA",590.31,,17.97,-9.47%,141997
+4,"CRC","California Resources Corporation","Basic Materials","Independent Oil & Gas","USA",441.10,1.08,8.37,-0.12%,2761712
+5,"CTB","Cooper Tire & Rubber Company","Consumer Goods","Rubber & Plastics","USA",1391.17,30.13,27.63,-0.47%,361043
+6,"CVGW","Calavo Growers, Inc.","Consumer Goods","Farm Products","USA",1417.85,38.91,81.02,-2.20%,141304
+7,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1167.88,26.00,57.73,-1.85%,198656
+8,"EOLS","Evolus, Inc.","Healthcare","Drugs - Generic","USA",373.62,,10.69,-1.57%,885987
+9,"EQT","EQT Corporation","Basic Materials","Independent Oil & Gas","USA",2180.80,,8.37,-5.32%,13076181
+10,"FIXX","Homology Medicines, Inc.","Healthcare","Biotechnology","USA",761.75,,17.34,-2.97%,285712
+11,"GVA","Granite Construction Incorporated","Industrial Goods","Heavy Construction","USA",1220.33,,26.12,-5.64%,926743
+12,"KURA","Kura Oncology, Inc.","Healthcare","Biotechnology","USA",595.92,,13.10,-2.89%,298442
+13,"MOV","Movado Group, Inc.","Consumer Goods","Recreational Goods, Other","USA",323.20,9.20,19.40,-3.39%,474141
+14,"SIX","Six Flags Entertainment Corporation","Services","General Entertainment","USA",3657.70,11.25,35.56,-1.11%,3961084
+15,"TAST","Carrols Restaurant Group, Inc.","Services","Restaurants","USA",303.63,,5.89,-13.25%,2405955
+16,"TWNK","Hostess Brands, Inc.","Consumer Goods","Processed & Packaged Goods","USA",1837.36,27.84,14.06,-0.21%,510825
+17,"VCEL","Vericel Corporation","Healthcare","Biotechnology","USA",738.10,,16.19,-3.05%,904467
+18,"WNC","Wabash National Corporation","Consumer Goods","Trucks & Other Vehicles","USA",757.07,9.26,13.73,-1.51%,1304880
+19,"XERS","Xeris Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",158.90,,5.55,-4.39%,263930

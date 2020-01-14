@@ -49,7 +49,7 @@ def get_data_alphavantage(symbol_list):
             time.sleep(15)
             
         except:
-            error_tickers = error_tickers.append(symbol)
+            error_tickers.append(symbol)
             pass
     
     return price_df, data_df, atr_df
