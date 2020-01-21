@@ -293,6 +293,7 @@ class TestApp(TestWrapper, TestClient):
             parent.orderType = "STP LMT"
             parent.auxPrice = parentOrderPrice
             if action == 'BUY':
+                print(action)
                 parent.lmtPrice = round(parentOrderPrice + trailAmount, 1)
             elif action == 'SELL':
                 parent.lmtPrice = round(parentOrderPrice - trailAmount, 1)

@@ -1,20 +1,8 @@
 "No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
-1,"ABMD","Abiomed, Inc.","Healthcare","Medical Appliances & Equipment","USA",7618.12,35.11,168.10,-11.09%,3968041
-2,"APRN","Blue Apron Holdings, Inc.","Services","Specialty Retail, Other","USA",70.46,,5.04,-5.79%,462075
-3,"AVRO","AVROBIO, Inc.","Healthcare","Biotechnology","USA",590.31,,17.97,-9.47%,141997
-4,"CRC","California Resources Corporation","Basic Materials","Independent Oil & Gas","USA",441.10,1.08,8.37,-0.12%,2761712
-5,"CTB","Cooper Tire & Rubber Company","Consumer Goods","Rubber & Plastics","USA",1391.17,30.13,27.63,-0.47%,361043
-6,"CVGW","Calavo Growers, Inc.","Consumer Goods","Farm Products","USA",1417.85,38.91,81.02,-2.20%,141304
-7,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1167.88,26.00,57.73,-1.85%,198656
-8,"EOLS","Evolus, Inc.","Healthcare","Drugs - Generic","USA",373.62,,10.69,-1.57%,885987
-9,"EQT","EQT Corporation","Basic Materials","Independent Oil & Gas","USA",2180.80,,8.37,-5.32%,13076181
-10,"FIXX","Homology Medicines, Inc.","Healthcare","Biotechnology","USA",761.75,,17.34,-2.97%,285712
-11,"GVA","Granite Construction Incorporated","Industrial Goods","Heavy Construction","USA",1220.33,,26.12,-5.64%,926743
-12,"KURA","Kura Oncology, Inc.","Healthcare","Biotechnology","USA",595.92,,13.10,-2.89%,298442
-13,"MOV","Movado Group, Inc.","Consumer Goods","Recreational Goods, Other","USA",323.20,9.20,19.40,-3.39%,474141
-14,"SIX","Six Flags Entertainment Corporation","Services","General Entertainment","USA",3657.70,11.25,35.56,-1.11%,3961084
-15,"TAST","Carrols Restaurant Group, Inc.","Services","Restaurants","USA",303.63,,5.89,-13.25%,2405955
-16,"TWNK","Hostess Brands, Inc.","Consumer Goods","Processed & Packaged Goods","USA",1837.36,27.84,14.06,-0.21%,510825
-17,"VCEL","Vericel Corporation","Healthcare","Biotechnology","USA",738.10,,16.19,-3.05%,904467
-18,"WNC","Wabash National Corporation","Consumer Goods","Trucks & Other Vehicles","USA",757.07,9.26,13.73,-1.51%,1304880
-19,"XERS","Xeris Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",158.90,,5.55,-4.39%,263930
+1,"ARCH","Arch Coal, Inc.","Basic Materials","Industrial Metals & Minerals","USA",1043.30,3.64,66.30,-3.56%,468444
+2,"BCEI","Bonanza Creek Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",419.99,2.35,19.99,-1.91%,421140
+3,"CEIX","CONSOL Energy Inc.","Basic Materials","Industrial Metals & Minerals","USA",296.04,2.96,11.10,-3.31%,437877
+4,"CLR","Continental Resources, Inc.","Basic Materials","Independent Oil & Gas","USA",12475.79,15.66,32.66,-2.16%,2422594
+5,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1150.11,26.10,57.94,-1.09%,181030
+6,"KLXE","KLX Energy Services Holdings, Inc.","Basic Materials","Oil & Gas Equipment & Services","USA",130.01,,5.30,-3.11%,231997
+7,"KURA","Kura Oncology, Inc.","Healthcare","Biotechnology","USA",573.69,,12.76,-1.54%,254722

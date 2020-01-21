@@ -39,14 +39,14 @@ def get_data_alphavantage(symbol_list):
             data_df[symbol] = pd.read_csv(io.StringIO(data.content.decode('utf8')))
             price_df[symbol] = data_df[symbol]['adjusted_close'].iloc[:100]
     
-            time.sleep(15)
+            time.sleep(13)
             
             atr_period = 5
             atr_url = 'https://www.alphavantage.co/query?function=ATR&symbol=' + symbol + '&interval=daily&time_period=' + str(atr_period) + '&apikey=' + api_key + '&datatype=csv'
             atr_data = requests.get(atr_url)
             atr_df[symbol] = pd.read_csv(io.StringIO(atr_data.content.decode('utf8')))
             
-            time.sleep(15)
+            time.sleep(13)
             
         except:
             error_tickers.append(symbol)
@@ -86,11 +86,30 @@ def update_excel_data():
 
     price_dfs, data_dfs, atr_dfs = get_data_alphavantage(symbols)
 
+    import pickle
+    with open(get_project_file_path('prices.pkl'), 'wb') as f:
+        pickle.dump(price_dfs, f)
+    with open(get_project_file_path('data.pkl'), 'wb') as f:
+        pickle.dump(data_dfs, f)
+    with open(get_project_file_path('atr_dfs.pkl'), 'wb') as f:
+        pickle.dump(atr_dfs, f)
+
+    # with open(get_project_file_path('prices.pkl'), 'rb') as f:
+    #     price_dfs = pickle.load(f)
+    # with open(get_project_file_path('data.pkl'), 'rb') as f:
+    #     data_dfs = pickle.load(f)
+    # with open(get_project_file_path('atr_dfs.pkl'), 'rb') as f:
+    #     atr_dfs = pickle.load(f)
+
     updated_data = []
     for tpl in zip(symbols, signals):
         symbol = tpl[0]
         signal = tpl[1]
+        if symbol not in price_dfs:
+            continue
         price_series = price_dfs[symbol]
+        if symbol not in atr_dfs:
+            continue
         atr_df = atr_dfs[symbol]
         price = price_series.iloc[0]
         atr = atr_df['ATR'].iloc[0]
@@ -114,7 +133,7 @@ def read_finviz_data():
     buy_csv = get_project_file_path('BUY.csv')
     sell_csv = get_project_file_path('SELL.csv')
     buy_df = pd.read_csv(buy_csv)
-    sell_df = pd.read_csv(sell_csv)
+    sell_df = pd.read_csv(sell_csv)d
     columns = ['signal', 'symbol']
     buy_df['signal'] = 'BUY'
     sell_df['signal'] = 'SELL'
