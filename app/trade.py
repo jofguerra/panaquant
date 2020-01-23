@@ -133,7 +133,7 @@ def read_finviz_data():
     buy_csv = get_project_file_path('BUY.csv')
     sell_csv = get_project_file_path('SELL.csv')
     buy_df = pd.read_csv(buy_csv)
-    sell_df = pd.read_csv(sell_csv)d
+    sell_df = pd.read_csv(sell_csv)
     columns = ['signal', 'symbol']
     buy_df['signal'] = 'BUY'
     sell_df['signal'] = 'SELL'
@@ -166,27 +166,27 @@ def get_order_pars():
 
     orders_df['stop_price'] = np.where(
         orders_df['signal'] == 'BUY',
-        orders_df['price'] + orders_df['atr'] * trade_config['stop_atr'],
-        orders_df['price'] - orders_df['atr'] * trade_config['stop_atr']
+        orders_df['price'] * 1.05,
+        orders_df['price'] * 0.95
     )
 
-    orders_df['trail_amount'] = orders_df['atr'] * trade_config['trail_atr']
+    orders_df['trail_amount'] = orders_df['atr'] * 1.2 * trade_config['trail_atr']
 
     orders_df['stop_loss'] = np.where(
         orders_df['signal'] == 'BUY',
-        orders_df['stop_price'] + orders_df['atr'] * trade_config['sl_atr'],
-        orders_df['stop_price'] - orders_df['atr'] * trade_config['sl_atr']
+        orders_df['price'] * 0.98,
+        orders_df['price'] * 1.05
     )
 
     orders_df['take_profit'] = np.where(
         orders_df['signal'] == 'BUY',
-        orders_df['stop_price'] + orders_df['atr'] * trade_config['tp_atr'],
-        orders_df['stop_price'] - orders_df['atr'] * trade_config['tp_atr']
+        orders_df['price'] * 1.02,
+        orders_df['price'] * 0.95
     )
 
     orders_df['order_type'] = trade_config['order_type']
 
-    orders_df = orders_df.round(1)
+    orders_df = orders_df.round(2)
     orders_file = get_project_file_path('Orders.xlsx')
     with pd.ExcelWriter(orders_file) as writer:
         orders_df.to_excel(writer, sheet_name='Orders')

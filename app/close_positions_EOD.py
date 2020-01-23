@@ -7,12 +7,14 @@ Created on Sun Sep  8 20:33:55 2019
 
 # Load Libraries
 from ibapi.utils import iswrapper
+from ibapi.order_state import OrderState
 from ibapi import wrapper
 from ibapi import utils
-from ibapi.wrapper import EWrapper
+from ibapi.wrapper import EWrapper, OrderId
 from ibapi.client import EClient
 from ibapi.contract import Contract
 from ibapi.order import *
+
 from threading import Thread
 import queue
 import pandas as pd
@@ -226,6 +228,34 @@ class TestApp(TestWrapper, TestClient):
         self.cancel_cnt = 0
 
         self.init_error()
+
+    def openOrder(self, orderId: OrderId, contract: Contract, order: Order, orderState: OrderState):
+        super().openOrder(orderId, contract, order, orderState)
+        data = {
+            'order': order,
+            'order_state': orderState,
+            'contract': contract,
+            'order_id': orderId
+        }
+        print(data)
+
+    def orderStatus(self, orderId: OrderId, status: str, filled: float, remaining: float,
+                    avgFillPrice: float, permId: int, parentId: int, lastFillPrice: float, clientId: int,
+                    whyHeld: str, mktCapPrice: float):
+        super().orderStatus(orderId, status, filled, remaining, avgFillPrice, permId, parentId,
+                            lastFillPrice, clientId, whyHeld, mktCapPrice)
+        data = {
+            'order_id': orderId,
+            'filled': filled,
+            'remaining': remaining,
+            'avgFillPrice': avgFillPrice,
+            'permId': permId,
+            'parentId': parentId,
+            'lastFillPrice': lastFillPrice,
+            'mktCapPrice': mktCapPrice
+        }
+        print(data)
+
         
     def error(self, reqId, errorCode, errorString):
         print('Error: ', reqId, ' ', errorCode, ' ', errorString)
@@ -285,6 +315,8 @@ class TestApp(TestWrapper, TestClient):
     def close_orders(self):
         # Cancel all orders for all accounts
         # ! [reqglobalcancel]
+        self.reqOpenOrders()
+
         self.reqGlobalCancel()
         # ! [reqglobalcancel]
         
