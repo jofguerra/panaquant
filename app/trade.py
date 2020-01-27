@@ -166,8 +166,8 @@ def get_order_pars():
 
     orders_df['stop_price'] = np.where(
         orders_df['signal'] == 'BUY',
-        orders_df['price'] * 1.05,
-        orders_df['price'] * 0.95
+        orders_df['price'] * 1.035,
+        orders_df['price'] * 0.98
     )
 
     orders_df['trail_amount'] = orders_df['atr'] * 1.2 * trade_config['trail_atr']
@@ -175,13 +175,13 @@ def get_order_pars():
     orders_df['stop_loss'] = np.where(
         orders_df['signal'] == 'BUY',
         orders_df['price'] * 0.98,
-        orders_df['price'] * 1.05
+        orders_df['price'] * 1.035
     )
 
     orders_df['take_profit'] = np.where(
         orders_df['signal'] == 'BUY',
         orders_df['price'] * 1.02,
-        orders_df['price'] * 0.95
+        orders_df['price'] * 0.965
     )
 
     orders_df['order_type'] = trade_config['order_type']

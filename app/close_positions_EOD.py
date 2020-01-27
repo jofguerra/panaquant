@@ -226,8 +226,15 @@ class TestApp(TestWrapper, TestClient):
         self.nextValidOrderId = None
         self.positions_df = pd.DataFrame()
         self.cancel_cnt = 0
-
+        self.reqPnLSingle(17002, "DU1674138", "", 8314)
         self.init_error()
+
+    def pnlSingle(self, reqId: int, pos: int, dailyPnL: float,
+                  unrealizedPnL: float, realizedPnL: float, value: float):
+        super().pnlSingle(reqId, pos, dailyPnL, unrealizedPnL, realizedPnL, value)
+        print("Daily PnL Single. ReqId:", reqId, "Position:", pos,
+              "DailyPnL:", dailyPnL, "UnrealizedPnL:", unrealizedPnL,
+              "RealizedPnL:", realizedPnL, "Value:", value)
 
     def openOrder(self, orderId: OrderId, contract: Contract, order: Order, orderState: OrderState):
         super().openOrder(orderId, contract, order, orderState)

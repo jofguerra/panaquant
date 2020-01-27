@@ -1,98 +1,38 @@
 "No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
-1,"ABC","AmerisourceBergen Corporation","Services","Drugs Wholesale","USA",18932.41,23.94,92.03,0.85%,1494275
-2,"ABT","Abbott Laboratories","Healthcare","Medical Appliances & Equipment","USA",162731.92,49.65,91.86,2.37%,9824383
-3,"ADX","Adams Diversified Equity Fund, Inc.","Financial","Closed-End Fund - Equity","USA",1708.44,8.34,16.17,0.06%,182268
-4,"AHH","Armada Hoffler Properties, Inc.","Financial","REIT - Diversified","USA",1434.31,55.01,18.87,0.05%,138587
-5,"AMAT","Applied Materials, Inc.","Technology","Semiconductor Equipment & Materials","USA",58714.91,22.52,63.89,1.09%,5589998
-6,"AMH","American Homes 4 Rent","Financial","REIT - Residential","USA",8046.34,101.84,27.19,0.41%,3068440
-7,"APD","Air Products and Chemicals, Inc.","Basic Materials","Chemicals - Major Diversified","USA",52416.41,30.20,238.04,0.36%,924396
-8,"APO","Apollo Global Management, Inc.","Financial","Diversified Investments","USA",11506.69,23.63,52.01,2.46%,1266665
-9,"ASPU","Aspen Group, Inc.","Services","Education & Training Services","USA",168.92,,8.45,1.08%,280038
-10,"ATKR","Atkore International Group Inc.","Industrial Goods","Industrial Electrical Equipment","USA",1988.48,14.96,42.43,0.76%,395544
-11,"BGCP","BGC Partners, Inc.","Financial","Investment Brokerage - National","USA",3054.55,82.03,6.07,0.66%,1807169
-12,"BHE","Benchmark Electronics, Inc.","Technology","Printed Circuit Boards","USA",1339.38,28.53,37.03,0.90%,306196
-13,"BMCH","BMC Stock Holdings, Inc.","Industrial Goods","General Building Materials","USA",2085.62,18.03,31.41,1.58%,370225
-14,"CAH","Cardinal Health, Inc.","Services","Drugs Wholesale","USA",16374.72,,55.32,2.43%,3042829
-15,"CDNS","Cadence Design Systems, Inc.","Technology","Application Software","USA",20666.49,49.44,74.80,0.27%,1150146
-16,"CG","The Carlyle Group Inc.","Financial","Asset Management","USA",11562.99,12.21,34.28,2.60%,3769816
-17,"CIT","CIT Group Inc.","Financial","Credit Services","USA",4367.15,10.07,47.07,4.02%,5916764
-18,"COF","Capital One Financial Corporation","Financial","Credit Services","USA",49440.56,9.49,106.76,4.47%,5689165
-19,"CPRT","Copart, Inc.","Services","Auto Dealerships","USA",23032.78,34.13,99.64,1.05%,1456401
-20,"CSWC","Capital Southwest Corporation","Financial","Asset Management","USA",383.16,15.45,21.55,0.23%,109028
-21,"CTXS","Citrix Systems, Inc.","Technology","Business Software & Services","USA",15532.93,26.57,119.23,1.17%,1866283
-22,"DGX","Quest Diagnostics Incorporated","Healthcare","Medical Laboratories & Research","USA",14568.24,20.92,108.54,1.12%,672149
-23,"DHI","D.R. Horton, Inc.","Industrial Goods","Residential Construction","USA",21009.98,13.38,57.42,0.79%,2415382
-24,"DOOR","Masonite International Corporation","Industrial Goods","General Building Materials","USA",1933.05,36.87,78.90,0.80%,109462
-25,"ELAN","Elanco Animal Health Incorporated","Technology","Telecom Services - Foreign","USA",12112.36,125.90,32.23,5.26%,10628327
-26,"EVR","Evercore Inc.","Financial","Asset Management","USA",3441.33,9.59,77.70,0.56%,372777
-27,"EXC","Exelon Corporation","Utilities","Diversified Utilities","USA",46373.18,20.03,47.66,0.17%,8745175
-28,"EXLS","ExlService Holdings, Inc.","Technology","Information Technology Services","USA",2470.67,50.44,73.14,1.20%,161958
-29,"EXP","Eagle Materials Inc.","Industrial Goods","Cement","USA",3886.15,87.20,93.48,0.05%,280329
-30,"FE","FirstEnergy Corp.","Utilities","Electric Utilities","USA",26773.97,20.90,49.89,1.20%,3339768
-31,"FISV","Fiserv, Inc.","Services","Business Services","USA",81807.68,56.50,122.05,1.19%,2904085
-32,"GOOG","Alphabet Inc.","Technology","Internet Information Providers","USA",1011805.61,31.89,1485.95,0.10%,1593218
-33,"GOOGL","Alphabet Inc.","Technology","Internet Information Providers","USA",1015869.87,32.29,1484.17,0.13%,1417593
-34,"GPN","Global Payments Inc.","Services","Business Services","USA",59645.89,85.53,200.06,0.64%,1438864
-35,"GRBK","Green Brick Partners, Inc.","Financial","Real Estate Development","USA",601.55,10.98,12.15,0.33%,138532
-36,"HE","Hawaiian Electric Industries, Inc.","Utilities","Electric Utilities","USA",5183.59,27.30,47.85,0.36%,258078
-37,"HUBB","Hubbell Incorporated","Technology","Diversified Electronics","USA",8092.87,21.22,149.04,0.40%,248839
-38,"IBP","Installed Building Products, Inc.","Industrial Goods","General Building Materials","USA",2321.78,35.48,76.50,0.59%,308709
-39,"ICAD","iCAD, Inc.","Technology","Technical & System Software","USA",176.39,,9.74,1.88%,278201
-40,"IIIV","i3 Verticals, Inc.","Technology","Business Software & Services","USA",894.54,,33.07,2.67%,197469
-41,"INTC","Intel Corporation","Technology","Semiconductor - Broad Line","USA",269582.17,14.69,62.73,3.60%,29364769
-42,"ITGR","Integer Holdings Corporation","Healthcare","Medical Appliances & Equipment","USA",2974.02,27.25,91.06,2.60%,217256
-43,"IVR","Invesco Mortgage Capital Inc.","Real Estate","REIT-Mortgage","USA",2454.42,122.84,17.32,0.35%,1057522
-44,"JKHY","Jack Henry & Associates, Inc.","Technology","Information Technology Services","USA",11465.42,41.61,149.64,0.02%,351601
-45,"KBH","KB Home","Industrial Goods","Residential Construction","USA",3400.67,18.03,38.27,1.14%,1099428
-46,"KLAC","KLA Corporation","Technology","Semiconductor Equipment & Materials","USA",28586.09,25.17,180.13,0.74%,1084174
-47,"KO","The Coca-Cola Company","Consumer Goods","Beverages - Soft Drinks","USA",246308.10,32.62,57.61,0.77%,10926886
-48,"LAMR","Lamar Advertising Company (REIT)","Financial","REIT - Diversified","USA",9238.15,25.81,93.96,0.45%,322311
-49,"LEN","Lennar Corporation","Industrial Goods","Residential Construction","USA",20264.39,10.82,65.77,1.28%,3128889
-50,"LLY","Eli Lilly and Company","Healthcare","Drug Manufacturers - Major","USA",135608.82,30.48,141.56,0.46%,2718547
-51,"LNT","Alliant Energy Corporation","Utilities","Electric Utilities","USA",13753.16,25.90,57.75,0.68%,1193459
-52,"LOW","Lowe's Companies, Inc.","Services","Home Improvement Stores","USA",93636.64,32.22,121.91,0.81%,4773155
-53,"LQDA","Liquidia Technologies, Inc.","Healthcare","Biotechnology","USA",127.61,,7.00,4.17%,204036
-54,"LRCX","Lam Research Corporation","Technology","Semiconductor Equipment & Materials","USA",45042.49,22.94,311.34,0.86%,1499804
-55,"MCO","Moody's Corporation","Services","Business Services","USA",48661.83,37.54,257.47,0.44%,587216
-56,"MDT","Medtronic plc","Healthcare","Medical Appliances & Equipment","USA",162357.47,35.42,121.09,0.64%,4161724
-57,"MRCC","Monroe Capital Corporation","Financial","Mortgage Investment","USA",242.30,15.01,11.93,2.40%,310621
-58,"MU","Micron Technology, Inc.","Technology","Semiconductor- Memory Chips","USA",64009.51,19.43,59.17,0.34%,22519702
-59,"MWA","Mueller Water Products, Inc.","Industrial Goods","Industrial Equipment & Components","USA",1896.91,30.68,12.18,0.50%,1117200
-60,"MXL","MaxLinear, Inc.","Technology","Semiconductor - Integrated Circuits","USA",1496.60,,21.54,0.98%,276853
-61,"NDSN","Nordson Corporation","Industrial Goods","Diversified Machinery","USA",9694.05,28.98,170.34,0.97%,562981
-62,"NOVA","Sunnova Energy International Inc.","Services","Management Services","USA",1056.46,,12.89,1.42%,808369
-63,"NVDA","NVIDIA Corporation","Technology","Semiconductor - Specialized","USA",150965.19,70.82,250.05,0.85%,5949058
-64,"NYMT","New York Mortgage Trust, Inc.","Real Estate","REIT-Mortgage","USA",2059.37,13.39,6.36,0.32%,4124402
-65,"OESX","Orion Energy Systems, Inc.","Technology","Diversified Electronics","USA",139.28,16.99,5.03,5.67%,818188
-66,"OPI","Office Properties Income Trust","Financial","REIT - Office","USA",1721.73,,35.08,1.24%,177091
-67,"PANW","Palo Alto Networks, Inc.","Technology","Networking & Communication Devices","USA",23624.75,,243.73,0.21%,707524
-68,"PAYX","Paychex, Inc.","Services","Staffing & Outsourcing Services","USA",31892.22,30.05,89.60,1.07%,1369005
-69,"PEG","Public Service Enterprise Group Incorporated","Utilities","Diversified Utilities","USA",30531.70,21.01,60.30,1.26%,3958851
-70,"PEGA","Pegasystems Inc.","Technology","Business Software & Services","USA",6854.87,,88.45,0.32%,281013
-71,"PEP","PepsiCo, Inc.","Consumer Goods","Beverages - Soft Drinks","USA",200301.87,17.64,143.38,1.07%,5344407
-72,"PFPT","Proofpoint, Inc.","Technology","Application Software","USA",7043.81,,126.71,1.60%,1151917
-73,"PHR","Phreesia, Inc.","Technology","Healthcare Information Services","USA",963.87,,28.50,0.60%,798943
-74,"PMT","PennyMac Mortgage Investment Trust","Real Estate","REIT-Mortgage","USA",2311.25,10.14,23.21,0.17%,1065984
-75,"RJF","Raymond James Financial, Inc.","Financial","Investment Brokerage - Regional","USA",13277.15,13.57,97.24,0.62%,1251925
-76,"RMD","ResMed Inc.","Healthcare","Medical Instruments & Supplies","USA",23624.53,55.93,164.38,1.51%,371768
-77,"SIBN","SI-BONE, Inc.","Healthcare","Medical Appliances & Equipment","USA",536.23,,22.04,0.59%,465983
-78,"SMTC","Semtech Corporation","Technology","Semiconductor - Integrated Circuits","USA",3614.77,79.26,54.45,0.09%,264678
-79,"SO","The Southern Company","Utilities","Electric Utilities","USA",71578.40,15.76,68.30,0.26%,3369609
-80,"SSD","Simpson Manufacturing Co., Inc.","Industrial Goods","Small Tools & Accessories","USA",3695.00,32.28,84.67,1.51%,252345
-81,"STWD","Starwood Property Trust, Inc.","Real Estate","REIT-Mortgage","USA",7160.62,16.83,25.57,0.51%,1090327
-82,"TCPC","BlackRock TCP Capital Corp.","Financial","Closed-End Fund - Debt","USA",836.92,27.27,14.26,1.06%,443058
-83,"TENB","Tenable Holdings, Inc.","Technology","Business Software & Services","USA",2570.88,,26.78,0.60%,603071
-84,"TMO","Thermo Fisher Scientific Inc.","Healthcare","Medical Laboratories & Research","USA",136360.05,38.59,340.05,0.83%,922120
-85,"TRMB","Trimble Inc.","Technology","Scientific & Technical Instruments","USA",11077.70,33.09,44.24,0.14%,1112633
-86,"TROW","T. Rowe Price Group, Inc.","Financial","Asset Management","USA",30540.15,16.83,132.57,0.20%,1169058
-87,"TRU","TransUnion","Services","Business Services","USA",17670.10,54.08,93.89,0.46%,969562
-88,"TTEK","Tetra Tech, Inc.","Services","Technical Services","USA",4863.96,32.28,90.09,0.92%,217368
-89,"TWO","Two Harbors Investment Corp.","Real Estate","REIT-Mortgage","USA",4142.33,,15.26,0.73%,1499696
-90,"UMH","UMH Properties, Inc.","Financial","REIT - Diversified","USA",663.39,,16.49,0.55%,138320
-91,"VRTX","Vertex Pharmaceuticals Incorporated","Healthcare","Biotechnology","USA",60282.10,104.50,234.61,0.26%,1133709
-92,"WDAY","Workday, Inc.","Technology","Application Software","USA",41127.98,,182.41,0.05%,1869056
-93,"WMS","Advanced Drainage Systems, Inc.","Consumer Goods","Rubber & Plastics","USA",2878.62,,42.47,0.38%,252956
-94,"WRB","W. R. Berkley Corporation","Financial","Property & Casualty Insurance","USA",12938.61,20.41,71.24,1.99%,951224
-95,"XRAY","DENTSPLY SIRONA Inc.","Healthcare","Medical Instruments & Supplies","USA",13544.40,85.03,60.71,0.61%,2383845
-96,"YMAB","Y-mAbs Therapeutics, Inc.","Healthcare","Biotechnology","USA",1260.17,,34.62,5.20%,433625
-97,"ZBH","Zimmer Biomet Holdings, Inc.","Healthcare","Medical Appliances & Equipment","USA",30925.23,,150.98,1.00%,849726
+1,"AMTB","Amerant Bancorp Inc.","Financial","Regional - Midwest Banks","USA",856.54,18.05,22.07,-0.09%,47712
+2,"BDCL","UBS ETRACS 2xLeveraged Long Wells Fargo Business Development Company Index ETN","Financial","Exchange Traded Fund","USA",,,14.42,0.63%,35545
+3,"BIZD","VanEck Vectors BDC Income ETF","Financial","Exchange Traded Fund","USA",,,16.65,0.06%,36099
+4,"BST","BlackRock Science and Technology Trust","Financial","Closed-End Fund - Equity","USA",757.98,,33.73,0.15%,45241
+5,"CFO","VictoryShares US 500 Enhanced Volatility Wtd ETF","Financial","Exchange Traded Fund","USA",,,51.72,0.41%,30229
+6,"CORP","PIMCO Investment Grade Corporate Bond Index Exchange-Traded Fund","Financial","Exchange Traded Fund","USA",,,110.03,0.13%,23150
+7,"EPS","WisdomTree U.S. Earnings 500 Fund","Financial","Exchange Traded Fund","USA",,,35.75,0.14%,34713
+8,"ESGU","iShares ESG MSCI USA ETF","Financial","Exchange Traded Fund","USA",,,69.58,0.32%,45954
+9,"FEX","First Trust Large Cap Core AlphaDEX Fund","Financial","Exchange Traded Fund","USA",,,64.08,0.28%,38896
+10,"FIDU","Fidelity MSCI Industrials Index ETF","Financial","Exchange Traded Fund","USA",,,42.40,0.40%,33233
+11,"FLCO","Franklin Liberty Investment Grade Corporate ETF","Financial","Exchange Traded Fund","USA",,,25.76,0.25%,6703
+12,"FLTR","VanEck Vectors Investment Grade Floating Rate ETF","Financial","Exchange Traded Fund","USA",,,25.35,0.08%,46374
+13,"FPX","First Trust US Equity Opportunities ETF","Financial","Exchange Traded Fund","USA",,,79.83,0.67%,27276
+14,"FVC","First Trust Dorsey Wright Dynamic Focus 5 ETF","Financial","Exchange Traded Fund","USA",,,27.11,0.07%,16897
+15,"FXD","First Trust Consumer Discretionary AlphaDEX Fund","Financial","Exchange Traded Fund","USA",,,44.57,0.66%,45330
+16,"FXR","First Trust Industrials/Producer Durables AlphaDEX Fund","Financial","Exchange Traded Fund","USA",,,45.13,0.42%,30760
+17,"GIGB","Goldman Sachs Access Investment Grade Corporate Bond ETF","Financial","Exchange Traded Fund","USA",,,52.73,0.27%,17269
+18,"HUSV","First Trust Horizon Managed Volatility Domestic ETF","Financial","Exchange Traded Fund","USA",,,27.64,0.77%,28389
+19,"JMOM","JPMorgan U.S. Momentum Factor ETF","Financial","Exchange Traded Fund","USA",,,30.01,0.70%,11309
+20,"KOMP","SPDR S&P Kensho New Economies Composite ETF","Financial","Exchange Traded Fund","USA",,,35.08,0.20%,30733
+21,"MQY","BlackRock MuniYield Quality Fund, Inc.","Financial","Closed-End Fund - Debt","USA",465.90,13.08,15.17,0.33%,28571
+22,"OBNK","Origin Bancorp, Inc.","Financial","Regional - Southeast Banks","USA",845.37,15.59,35.76,-0.31%,29919
+23,"PBP","Invesco S&P 500 BuyWrite ETF","Financial","Exchange Traded Fund","USA",,,22.36,0.09%,24562
+24,"PHD","Pioneer Floating Rate Trust","Financial","Closed-End Fund - Debt","USA",263.71,27.69,10.66,0.28%,32601
+25,"PRFZ","Invesco FTSE RAFI US 1500 Small-Mid ETF","Financial","Exchange Traded Fund","USA",,,134.24,0.01%,20971
+26,"PSJ","Invesco Dynamic Software ETF","Financial","Exchange Traded Fund","USA",,,102.37,0.72%,40897
+27,"PWB","Invesco Dynamic Large Cap Growth ETF","Financial","Exchange Traded Fund","USA",,,49.92,0.62%,48373
+28,"QGRO","American Century U.S. Quality Growth ETF","Financial","Exchange Traded Fund","USA",,,44.31,0.59%,12280
+29,"QQEW","First Trust NASDAQ-100 Equal Weighted Index Fund","Financial","Exchange Traded Fund","USA",,,71.22,0.08%,35927
+30,"QUS","SPDR MSCI USA StrategicFactors ETF","Financial","Exchange Traded Fund","USA",,,93.09,0.41%,14417
+31,"SHE","SPDR SSGA Gender Diversity Index ETF","Financial","Exchange Traded Fund","USA",,,76.52,0.47%,3264
+32,"SLY","SPDR S&P 600 Small Cap ETF","Financial","Exchange Traded Fund","USA",,,70.79,-0.07%,19358
+33,"UYG","ProShares Ultra Financials","Financial","Exchange Traded Fund","USA",,,51.51,0.57%,32393
+34,"VCR","Vanguard Consumer Discretionary Index Fund ETF Shares","Financial","Exchange Traded Fund","USA",,,184.62,0.77%,48869
+35,"VIOO","Vanguard S&P Small-Cap 600 Index Fund ETF Shares","Financial","Exchange Traded Fund","USA",,,150.17,-0.05%,19855
+36,"VONV","Vanguard Russell 1000 Value Index Fund ETF Shares","Financial","Exchange Traded Fund","USA",,,117.52,0.09%,47324
+37,"XMMO","Invesco S&P MidCap Momentum ETF","Financial","Exchange Traded Fund","USA",,,60.47,0.72%,43158
