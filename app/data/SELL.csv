@@ -1,42 +1,65 @@
 "No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
-1,"AAWW","Atlas Air Worldwide Holdings, Inc.","Services","Air Services, Other","USA",631.86,2.35,24.74,-3.43%,382704
-2,"ALLO","Allogene Therapeutics, Inc.","Healthcare","Biotechnology","USA",2817.63,,23.41,-5.30%,769831
-3,"AMAG","AMAG Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",327.23,,9.63,-17.69%,2685143
-4,"ATEC","Alphatec Holdings, Inc.","Healthcare","Medical Instruments & Supplies","USA",380.84,,6.36,-5.64%,674036
-5,"BCEI","Bonanza Creek Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",357.59,2.00,17.02,-4.17%,245371
-6,"BKD","Brookdale Senior Living Inc.","Healthcare","Long-Term Care Facilities","USA",1265.39,,6.92,-3.35%,1198120
-7,"BPMC","Blueprint Medicines Corporation","Healthcare","Biotechnology","USA",3198.99,,65.58,-2.40%,1862280
-8,"BTU","Peabody Energy Corporation","Basic Materials","Industrial Metals & Minerals","USA",763.43,2.78,7.47,-1.97%,2003842
-9,"CEIX","CONSOL Energy Inc.","Basic Materials","Industrial Metals & Minerals","USA",255.23,2.55,9.57,-2.74%,679693
-10,"CLR","Continental Resources, Inc.","Basic Materials","Independent Oil & Gas","USA",11253.43,14.12,29.46,-3.54%,4002247
-11,"COG","Cabot Oil & Gas Corporation","Basic Materials","Independent Oil & Gas","USA",5961.70,7.82,14.64,-3.87%,11063034
-12,"CRC","California Resources Corporation","Basic Materials","Independent Oil & Gas","USA",350.91,0.94,7.30,-7.36%,3058183
-13,"DFIN","Donnelley Financial Solutions, Inc.","Services","Business Services","USA",317.91,10.96,9.47,-5.39%,148177
-14,"DO","Diamond Offshore Drilling, Inc.","Basic Materials","Oil & Gas Drilling & Exploration","USA",713.10,,5.11,-5.72%,3120077
-15,"DRQ","Dril-Quip, Inc.","Basic Materials","Oil & Gas Equipment & Services","USA",1606.34,,45.30,-2.98%,368828
-16,"ENBL","Enable Midstream Partners, LP","Basic Materials","Oil & Gas Pipelines","USA",4171.64,8.24,9.75,-3.75%,1210452
-17,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1088.77,24.71,54.85,-2.05%,201033
-18,"EQT","EQT Corporation","Basic Materials","Independent Oil & Gas","USA",1682.12,,6.65,-6.60%,11762053
-19,"GTHX","G1 Therapeutics, Inc.","Healthcare","Biotechnology","USA",798.33,,22.09,-6.56%,322849
-20,"HEAR","Turtle Beach Corporation","Technology","Communication Equipment","USA",116.01,8.78,8.31,-2.58%,283120
-21,"KURA","Kura Oncology, Inc.","Healthcare","Biotechnology","USA",530.53,,11.80,-3.83%,391830
-22,"LBRT","Liberty Oilfield Services Inc.","Basic Materials","Oil & Gas Equipment & Services","USA",964.26,14.36,8.79,-5.69%,654502
-23,"LOPE","Grand Canyon Education, Inc.","Services","Education & Training Services","USA",4398.04,17.23,91.99,-1.68%,330557
-24,"MSGN","MSG Networks Inc.","Services","Entertainment - Diversified","USA",904.54,6.44,15.51,-1.08%,995073
-25,"NBL","Noble Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",10358.26,,21.67,-3.04%,3652790
-26,"OSIS","OSI Systems, Inc.","Industrial Goods","Industrial Electrical Equipment","USA",1760.72,23.83,96.69,-2.03%,100134
-27,"PDCE","PDC Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",1307.40,9.83,21.06,-2.39%,2411535
-28,"PEB","Pebblebrook Hotel Trust","Financial","REIT - Hotel/Motel","USA",3199.97,,24.60,-1.91%,1864095
-29,"PUMP","ProPetro Holding Corp.","Basic Materials","Oil & Gas Equipment & Services","USA",970.80,5.14,10.00,-2.82%,1676563
-30,"PVAC","Penn Virginia Corporation","Basic Materials","Independent Oil & Gas","USA",365.30,1.36,23.86,-5.50%,185664
-31,"SCHN","Schnitzer Steel Industries, Inc.","Basic Materials","Steel & Iron","USA",511.65,15.96,18.79,-3.89%,330433
-32,"SFIX","Stitch Fix, Inc.","Services","Specialty Retail, Other","USA",2251.55,89.84,22.64,-2.29%,1303547
-33,"SGMO","Sangamo Therapeutics, Inc.","Healthcare","Biotechnology","USA",867.83,,7.50,-6.37%,2664221
-34,"TPB","Turning Point Brands, Inc.","Consumer Goods","Tobacco Products, Other","USA",501.80,20.20,25.76,-1.75%,151775
-35,"TRIP","TripAdvisor, Inc.","Technology","Internet Information Providers","USA",4074.68,36.05,29.74,-2.68%,2756441
-36,"TUP","Tupperware Brands Corporation","Consumer Goods","Packaging & Containers","USA",379.18,2.51,7.77,-9.12%,2499332
-37,"UNFI","United Natural Foods, Inc.","Services","Food Wholesale","USA",382.07,,7.18,-3.10%,1832678
-38,"URGN","UroGen Pharma Ltd.","Healthcare","Biotechnology","USA",599.56,,30.45,-1.77%,316771
-39,"VYGR","Voyager Therapeutics, Inc.","Healthcare","Biotechnology","USA",441.16,,12.19,-4.54%,557974
-40,"X","United States Steel Corporation","Basic Materials","Steel & Iron","USA",1604.49,2.65,9.40,-2.99%,14728410
-41,"XPER","Xperi Corporation","Technology","Semiconductor Equipment & Materials","USA",875.00,28.22,17.89,-2.61%,418177
+1,"AAWW","Atlas Air Worldwide Holdings, Inc.","Services","Air Services, Other","USA",608.36,2.26,23.82,-3.72%,474884
+2,"ALLO","Allogene Therapeutics, Inc.","Healthcare","Biotechnology","USA",2724.95,,22.64,-3.29%,715278
+3,"AMAG","AMAG Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",317.71,,9.35,-2.91%,770709
+4,"AMC","AMC Entertainment Holdings, Inc.","Services","Movie Production, Theaters","USA",640.71,,6.36,-5.64%,3154347
+5,"AMG","Affiliated Managers Group, Inc.","Financial","Asset Management","USA",3855.14,,79.80,-3.75%,733290
+6,"ATNX","Athenex, Inc.","Healthcare","Biotechnology","USA",1074.31,,13.88,-3.14%,479118
+7,"BCEI","Bonanza Creek Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",347.51,1.94,16.54,-2.82%,308850
+8,"BKD","Brookdale Senior Living Inc.","Healthcare","Long-Term Care Facilities","USA",1247.11,,6.82,-1.45%,1296229
+9,"BLFS","BioLife Solutions, Inc.","Healthcare","Medical Instruments & Supplies","USA",306.14,32.90,14.97,-1.12%,203940
+10,"BLUE","bluebird bio, Inc.","Healthcare","Biotechnology","USA",4595.87,,83.12,-4.74%,1411844
+11,"BNFT","Benefitfocus, Inc.","Technology","Application Software","USA",611.49,,18.85,-2.28%,194239
+12,"BPMC","Blueprint Medicines Corporation","Healthcare","Biotechnology","USA",3190.70,,65.41,-0.26%,1306116
+13,"BTU","Peabody Energy Corporation","Basic Materials","Industrial Metals & Minerals","USA",762.41,2.78,7.46,-0.13%,1567053
+14,"CEIX","CONSOL Energy Inc.","Basic Materials","Industrial Metals & Minerals","USA",238.70,2.39,8.95,-6.48%,592296
+15,"CEQP","Crestwood Equity Partners LP","Basic Materials","Oil & Gas Pipelines","USA",2143.53,9.87,29.66,-1.85%,365015
+16,"CHH","Choice Hotels International, Inc.","Services","Lodging","USA",5449.57,25.76,97.61,-1.76%,1088869
+17,"CLR","Continental Resources, Inc.","Basic Materials","Independent Oil & Gas","USA",10951.65,13.74,28.67,-2.68%,4136068
+18,"COG","Cabot Oil & Gas Corporation","Basic Materials","Independent Oil & Gas","USA",5872.11,7.71,14.42,-1.50%,10504576
+19,"CPS","Cooper-Standard Holdings Inc.","Consumer Goods","Auto Parts","USA",468.11,4.56,27.73,-5.55%,216038
+20,"CRC","California Resources Corporation","Basic Materials","Independent Oil & Gas","USA",338.89,0.91,7.05,-3.42%,1772145
+21,"DBD","Diebold Nixdorf, Incorporated","Technology","Diversified Computer Systems","USA",780.12,,10.30,-1.62%,1304648
+22,"DBI","Designer Brands Inc.","Services","Apparel Stores","USA",1077.56,18.97,15.44,-0.83%,1800739
+23,"DFIN","Donnelley Financial Solutions, Inc.","Services","Business Services","USA",308.17,10.63,9.18,-3.06%,227326
+24,"DRQ","Dril-Quip, Inc.","Basic Materials","Oil & Gas Equipment & Services","USA",1488.26,,41.97,-7.35%,312662
+25,"EAF","GrafTech International Ltd.","Industrial Goods","Diversified Machinery","USA",3228.95,4.04,11.13,-1.42%,2245417
+26,"EDIT","Editas Medicine, Inc.","Healthcare","Biotechnology","USA",1468.98,,27.97,-1.34%,583471
+27,"ELY","Callaway Golf Company","Consumer Goods","Sporting Goods","USA",1979.98,25.41,21.01,-1.41%,621723
+28,"ENBL","Enable Midstream Partners, LP","Basic Materials","Oil & Gas Pipelines","USA",4120.29,8.14,9.63,-1.23%,995365
+29,"ENTA","Enanta Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",1059.00,24.03,53.35,-2.73%,140686
+30,"EQT","EQT Corporation","Basic Materials","Independent Oil & Gas","USA",1666.94,,6.59,-0.90%,8449877
+31,"EXPE","Expedia Group, Inc.","Services","Lodging","USA",15662.80,32.68,109.08,-2.73%,2021240
+32,"FAST","Fastenal Company","Services","Industrial Equipment Wholesale","USA",20195.96,26.27,35.25,-0.76%,6127048
+33,"HEAR","Turtle Beach Corporation","Technology","Communication Equipment","USA",111.12,8.41,7.96,-4.21%,407828
+34,"HT","Hersha Hospitality Trust","Financial","REIT - Hotel/Motel","USA",498.30,,12.99,-3.13%,792905
+35,"INN","Summit Hotel Properties, Inc.","Financial","Real Estate Development","USA",1212.62,18.73,11.54,-1.11%,731250
+36,"IONS","Ionis Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",8393.14,86.14,59.09,-0.56%,834442
+37,"LBRT","Liberty Oilfield Services Inc.","Basic Materials","Oil & Gas Equipment & Services","USA",916.00,13.64,8.35,-5.01%,655612
+38,"LOPE","Grand Canyon Education, Inc.","Services","Education & Training Services","USA",4374.62,17.13,91.50,-0.53%,630049
+39,"MIK","The Michaels Companies, Inc.","Services","Specialty Retail, Other","USA",895.47,3.27,5.66,-8.41%,4549553
+40,"MSGN","MSG Networks Inc.","Services","Entertainment - Diversified","USA",887.63,6.32,15.22,-1.87%,699940
+41,"NBL","Noble Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",10014.10,,20.95,-3.32%,4260092
+42,"OSIS","OSI Systems, Inc.","Industrial Goods","Industrial Electrical Equipment","USA",1724.85,23.34,94.72,-2.04%,121471
+43,"PEB","Pebblebrook Hotel Trust","Financial","REIT - Hotel/Motel","USA",3150.54,,24.22,-1.54%,1896241
+44,"PHAS","PhaseBio Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",132.17,,5.22,-1.32%,239242
+45,"PUMP","ProPetro Holding Corp.","Basic Materials","Oil & Gas Equipment & Services","USA",946.53,5.01,9.75,-2.50%,1315821
+46,"PVAC","Penn Virginia Corporation","Basic Materials","Independent Oil & Gas","USA",336.21,1.25,21.96,-7.96%,233102
+47,"SCHN","Schnitzer Steel Industries, Inc.","Basic Materials","Steel & Iron","USA",476.53,14.87,17.50,-6.87%,362784
+48,"SFIX","Stitch Fix, Inc.","Services","Specialty Retail, Other","USA",2213.76,88.33,22.26,-1.68%,1347124
+49,"SGMO","Sangamo Therapeutics, Inc.","Healthcare","Biotechnology","USA",830.80,,7.18,-4.27%,2152532
+50,"SSYS","Stratasys Ltd.","Technology","Computer Peripherals","USA",1024.23,,19.58,-2.54%,817254
+51,"SUM","Summit Materials, Inc.","Industrial Goods","General Building Materials","USA",2535.25,126.97,22.60,-0.70%,768025
+52,"SUPN","Supernus Pharmaceuticals, Inc.","Healthcare","Drugs - Generic","USA",1233.24,11.93,23.45,-0.51%,331668
+53,"TCO","Taubman Centers, Inc.","Financial","REIT - Retail","USA",1744.47,,29.06,-6.41%,1488392
+54,"TELL","Tellurian Inc.","Basic Materials","Oil & Gas Drilling & Exploration","USA",1582.25,,6.78,-3.00%,2037826
+55,"TRIP","TripAdvisor, Inc.","Technology","Internet Information Providers","USA",3965.07,35.08,28.94,-2.69%,2577382
+56,"TUP","Tupperware Brands Corporation","Consumer Goods","Packaging & Containers","USA",373.81,2.47,7.66,-1.42%,1016322
+57,"UIS","Unisys Corporation","Technology","Information Technology Services","USA",617.86,41.49,10.04,-5.10%,869495
+58,"UNFI","United Natural Foods, Inc.","Services","Food Wholesale","USA",381.54,,7.17,-0.14%,950060
+59,"URGN","UroGen Pharma Ltd.","Healthcare","Biotechnology","USA",553.09,,28.09,-7.75%,164628
+60,"VYGR","Voyager Therapeutics, Inc.","Healthcare","Biotechnology","USA",427.77,,11.82,-3.04%,342750
+61,"WDR","Waddell & Reed Financial, Inc.","Financial","Asset Management","USA",1094.87,8.57,15.93,-3.16%,882109
+62,"WNC","Wabash National Corporation","Consumer Goods","Trucks & Other Vehicles","USA",628.00,7.97,11.82,-3.75%,1010432
+63,"X","United States Steel Corporation","Basic Materials","Steel & Iron","USA",1551.57,2.56,9.09,-3.30%,14331314
+64,"XPER","Xperi Corporation","Technology","Semiconductor Equipment & Materials","USA",838.81,27.05,17.15,-4.14%,372538
