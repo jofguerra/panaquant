@@ -1,18 +1,23 @@
 "No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
-1,"AGR","Avangrid, Inc.","Utilities","Gas Utilities","USA",16263.76,25.62,52.54,0.63%,407784
-2,"CME","CME Group Inc.","Financial","Investment Brokerage - National","USA",75539.04,37.42,212.99,1.79%,1715039
-3,"DGX","Quest Diagnostics Incorporated","Healthcare","Medical Laboratories & Research","USA",14693.06,21.10,109.47,1.56%,1516855
-4,"DHI","D.R. Horton, Inc.","Industrial Goods","Residential Construction","USA",21833.25,13.90,59.67,1.98%,7344232
-5,"FCPT","Four Corners Property Trust, Inc.","Financial","REIT - Hotel/Motel","USA",2054.10,27.55,30.11,1.38%,1117431
-6,"GRBK","Green Brick Partners, Inc.","Financial","Real Estate Development","USA",611.94,11.17,12.36,0.24%,142638
-7,"HIW","Highwoods Properties, Inc.","Financial","REIT - Office","USA",5154.12,41.87,50.24,0.10%,2011555
-8,"HR","Healthcare Realty Trust Incorporated","Financial","REIT - Healthcare Facilities","USA",4690.14,169.90,35.68,0.25%,547894
-9,"MCFT","MasterCraft Boat Holdings, Inc.","Consumer Goods","Recreational Vehicles","USA",339.26,15.71,17.96,0.62%,275307
-10,"NDSN","Nordson Corporation","Industrial Goods","Diversified Machinery","USA",9846.00,29.44,173.01,1.19%,297347
-11,"NEM","Newmont Corporation","Basic Materials","Gold","USA",36539.20,15.31,44.56,0.61%,7127760
-12,"PACQ","Pure Acquisition Corp.","Conglomerates","Conglomerates","USA",394.69,77.33,10.44,0.10%,920021
-13,"SO","The Southern Company","Utilities","Electric Utilities","USA",73087.52,16.10,69.74,0.43%,4405132
-14,"TRI","Thomson Reuters Corporation","Services","Publishing - Periodicals","USA",39198.43,188.63,79.79,0.81%,732686
-15,"TRTX","TPG RE Finance Trust, Inc.","Financial","Mortgage Investment","USA",1527.03,12.04,20.63,0.54%,320675
-16,"VIVO","Meridian Bioscience, Inc.","Healthcare","Diagnostic Substances","USA",491.12,20.25,11.50,20.67%,3486234
-17,"WCN","Waste Connections, Inc.","Industrial Goods","Waste Management","USA",25994.90,46.02,98.52,0.10%,849921
+1,"AMH","American Homes 4 Rent","Financial","REIT - Residential","USA",8197.26,103.75,27.70,0.80%,1245239
+2,"ASPU","Aspen Group, Inc.","Services","Education & Training Services","USA",172.31,,8.62,0.94%,107235
+3,"CASH","Meta Financial Group, Inc.","Financial","Savings & Loans","USA",1400.97,15.12,37.61,2.70%,468772
+4,"CBOE","Cboe Global Markets, Inc.","Financial","Diversified Investments","USA",13655.86,27.04,123.18,1.38%,408329
+5,"CBRE","CBRE Group, Inc.","Financial","Property Management","USA",20575.10,20.10,61.88,0.70%,1004268
+6,"CHMI","Cherry Hill Mortgage Investment Corporation","Financial","Mortgage Investment","USA",258.76,,15.23,1.33%,158360
+7,"ELS","Equity LifeStyle Properties, Inc.","Financial","REIT - Residential","USA",13270.55,51.10,73.12,0.56%,755989
+8,"FBHS","Fortune Brands Home & Security, Inc.","Consumer Goods","Home Furnishings & Fixtures","USA",9905.90,24.15,71.01,5.58%,3456209
+9,"FR","First Industrial Realty Trust, Inc.","Financial","REIT - Industrial","USA",5506.32,28.81,43.76,0.23%,480761
+10,"GL","Globe Life Inc.","Financial","Life Insurance","USA",11536.89,16.29,107.29,1.26%,329542
+11,"GRWG","GrowGeneration Corp.","Basic Materials","Agricultural Chemicals","USA",196.62,,5.03,2.24%,637953
+12,"HDS","HD Supply Holdings, Inc.","Services","Industrial Equipment Wholesale","USA",6812.72,15.17,41.38,1.50%,2659548
+13,"JBGS","JBG SMITH Properties","Financial","Property Management","USA",6076.88,183.53,41.11,0.39%,383882
+14,"LRCX","Lam Research Corporation","Technology","Semiconductor Equipment & Materials","USA",44986.07,22.91,310.95,4.27%,3922122
+15,"NLY","Annaly Capital Management, Inc.","Financial","Mortgage Investment","USA",13971.47,,9.80,0.41%,9165960
+16,"O","Realty Income Corporation","Financial","REIT - Retail","USA",25683.51,62.09,78.98,1.07%,2670589
+17,"OPB","Opus Bank","Financial","Money Center Banks","USA",975.96,35.98,27.02,2.08%,295814
+18,"SF","Stifel Financial Corp.","Financial","Investment Brokerage - Regional","USA",4436.74,12.70,66.22,5.63%,1057212
+19,"STC","Stewart Information Services Corporation","Financial","Property & Casualty Insurance","USA",996.92,11.19,42.35,1.07%,119367
+20,"TFSL","TFS Financial Corporation","Financial","Regional - Midwest Banks","USA",5580.52,70.60,20.05,1.16%,141507
+21,"UMBF","UMB Financial Corporation","Financial","Regional - Southwest  Banks","USA",3327.98,16.92,69.16,2.81%,358397
+22,"WDAY","Workday, Inc.","Technology","Application Software","USA",42422.18,,188.15,2.47%,1299265
