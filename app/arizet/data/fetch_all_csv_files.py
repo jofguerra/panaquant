@@ -9,9 +9,9 @@ from pandas.io.json import json_normalize
 
 def get_arizet_97(date):  # For manual input, enter date here
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    save_dir = os.path.join(dir_path, 'new_csv_files', '97_conf')
+    save_dir = os.path.join(dir_path, 'new_csv_files', '75_conf')
     try:
-        url = 'https://arizet.com/api9/screens/signals_97_prcnt/daily/data?apiKey=dhLUa4Vc6Yr4QqpYhIR7&date=' + date
+        url = 'https://arizet.com/api9/screens/signals_75_prcnt/daily/data?apiKey=dhLUa4Vc6Yr4QqpYhIR7&date=' + date
         data = requests.get(url)
         print(data)
         table = json.loads(data.content.decode('utf8'))

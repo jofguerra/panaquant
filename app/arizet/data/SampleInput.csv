@@ -1,0 +1,32 @@
+Date,Ticker,Name,Price,Volume,Signal,Success Rate,T-Score,Trades,Ave. Days
+20191005,AAN,"Aaron's,  Inc.",$62.75 ,539934,Buy,100.00%,17.56,15,6.5
+20191005,ZTS,Zoetis Inc.,$123.03 ,2903651,Buy,100.00%,18.66,15,4.3
+20191005,AAN,"Aaron's,  Inc.",$62.75 ,539934,Buy,100.00%,21.61,17,8.7
+20191005,AAN,"Aaron's,  Inc.",$62.75 ,539934,Buy,100.00%,22.91,18,9.4
+20191005,AAN,"Aaron's,  Inc.",$62.75 ,539934,Buy,100.00%,37.17,16,7.1
+20191005,AAN,"Aaron's,  Inc.",$62.75 ,539934,Buy,100.00%,23.78,19,9.3
+20191005,AAOI,"Applied Optoelectronics, Inc.",$11.44 ,922361,Buy,100.00%,7.56,19,21.4
+20191005,ABT,Abbott Laboratories,$83.21 ,5369061,Buy,100.00%,7.05,17,14.5
+20191005,ADRO,"Aduro Biotech, Inc.",$1.35 ,745503,Buy,100.00%,21.89,20,9.9
+20191005,ADUS,Addus HomeCare Corporation,$78.25 ,375466,Buy,100.00%,20.16,19,9.7
+20191005,ADX,"Adams Diversified Equity Fund, Inc.",$15.73 ,186825,Buy,100.00%,8.85,15,6.3
+20191005,YUM,"Yum! Brands, Inc.",$115.27 ,1862979,Buy,100.00%,14.62,15,7.1
+20191005,YUM,"Yum! Brands, Inc.",$115.27 ,1862979,Buy,97.20%,9.23,36,7.5
+20191005,XNCR,"Xencor, Inc.",$35.65 ,333949,Buy,100.00%,23.03,16,9.1
+20191005,XNCR,"Xencor, Inc.",$35.65 ,333949,Buy,100.00%,24.93,15,10.2
+20191005,AMPH,"Amphastar Pharmaceuticals, Inc.",$21.95 ,284470,Buy,100.00%,5.82,22,8.6
+20191005,AMRS,"Amyris, Inc.",$4.56 ,1514252,Buy,100.00%,12.43,17,5.3
+20191005,WYY,WidePoint Corporation,$0.33 ,197517,Buy,100.00%,14.51,20,9.4
+20191005,WOR,"Worthington Industries, Inc.",$37.90 ,173570,Buy,100.00%,38.13,26,7.1
+20191005,WLH,Lyon William Homes,$18.61 ,868286,Buy,100.00%,10.67,15,8.3
+20191005,ASNA,"Ascena Retail Group, Inc.",$0.37 ,9833677,Buy,100.00%,16.37,18,7.8
+20191005,ASR,"Grupo Aeroportuario del Sureste, S.A. de C.V.",$151.55 ,115068,Buy,100.00%,7.82,16,11.3
+20191005,AWR,American States Water Company,$88.85 ,239829,Buy,100.00%,6.78,29,6.9
+20191005,WAB,Westinghouse Air Brake Technologies Corporation,$72.25 ,1741290,Buy,100.00%,15.19,17,11.3
+20191005,UFI,"Unifi, Inc.",$22.43 ,251349,Buy,100.00%,9.82,15,19.7
+20191005,AWR,American States Water Company,$88.85 ,239829,Buy,100.00%,4.5,16,7.1
+20191005,TW,Tradeweb Markets Inc.,$40.75 ,633712,Buy,100.00%,14.15,16,9.7
+20191005,AXS,Axis Capital Holdings Limited,$63.47 ,531876,Buy,100.00%,19.99,15,5.2
+20191005,TV,Grupo Televisa S.A.,$9.35 ,1852873,Buy,100.00%,27.78,20,4.8
+20191005,BCH,Banco De Chile,$29.08 ,58642,Buy,100.00%,13.5,16,18.2
+20191005,BCH,Banco De Chile,$29.08 ,58642,Buy,100.00%,12.76,16,16.8
