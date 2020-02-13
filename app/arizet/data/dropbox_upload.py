@@ -61,7 +61,12 @@ def create_orders(df):
     df_filtered = df_filtered.loc[df_filtered['trades'] >= 3]
     df_filtered = df_filtered.loc[df_filtered['frequency'] > 5]
     df_filtered['amount'] = 3000 / df['price']
-    stocks = set(zip(df_filtered['ticker'], df_filtered['signal'], df_filtered['amount']))
+    stocks = set(zip(
+        df_filtered['ticker'],
+        df_filtered['signal'],
+        df_filtered['amount'],
+        df_filtered['price']
+    ))
 
     rows = []
     for stock in stocks:
@@ -71,7 +76,9 @@ def create_orders(df):
             'quantity': round(stock[2], 2),
             'order_type': 'TRAIL',
             'stop_loss': 750,
-            'take_profit': 320
+            'take_profit': 320,
+            'stop_price': stock[3] + 1,
+            'trail_amount': 2
         })
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
