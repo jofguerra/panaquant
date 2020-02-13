@@ -332,9 +332,9 @@ class TestApp(TestWrapper, TestClient):
             self.placeOrder(o.orderId, contract, o)
 
     def get_orders(self):
-        from trade import get_project_file_path
-        excel_path = get_project_file_path('Orders.xlsx')
-        order_df = pd.read_excel(excel_path, sheet_name='Orders')
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        full_file_path = os.path.join(dir_path, 'data', 'orders', 'orders.csv')
+        order_df = pd.read_csv(full_file_path)
         return order_df, order_df['order_type'].iloc[0]
 
     def start(self):
