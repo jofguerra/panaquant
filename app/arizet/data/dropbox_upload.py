@@ -20,8 +20,11 @@ class TransferData:
 
         with open(file_from, 'rb') as f:
             arizet_path = '/Apps/arizet_data/'
-            dbx.files_delete(arizet_path + file_to)
-            dbx.files_upload(f.read(), arizet_path + file_to)
+            # try:
+            # #    dbx.files_delete(arizet_path + file_to)
+            # except:
+            #     print('file not found')
+            dbx.files_upload(f.read(), arizet_path + file_to, mode=dropbox.dropbox.files.WriteMode.overwrite)
 
 
 def save_arizet_file_to_dropbox(date, transfer_data):  # For manual input, enter date here
@@ -88,11 +91,19 @@ def create_orders(df):
 
 
 if __name__ == '__main__':
-    access_token = ''
+    access_token = '9qwulo5PcvAAAAAAAAAAqHEYzmkYE0-f2KjWWgvwWiK6LaSgjPNYabddIVAvSVnG'
     trasfer_data = TransferData(access_token)
-    data_date = pd.tseries.offsets.BusinessDay(-1)
+    data_date = pd.tseries.offsets.BusinessDay(0)
     ts = dt.datetime.today()
     file_date = data_date + ts
     last_file_date_str = file_date.strftime('%Y-%m-%d')
     arizet_df = save_arizet_file_to_dropbox(last_file_date_str, trasfer_data)
     create_orders(arizet_df)
+
+    # Risk Management en QuantConnect
+    # Reducir el DrawDown o Maximize Profit
+    # Con stop loss o con RiskManagement Algos de ellos
+    # Ordenes
+    # 2 Productos en Paper Trading ()
+
+

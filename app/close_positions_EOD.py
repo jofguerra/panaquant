@@ -88,7 +88,6 @@ class TestWrapper(EWrapper):
     We override methods in EWrapper that will get called when this action happens, like currentTime
     Extra methods are added as we need to store the results in this object
     """
-
     def __init__(self):
         self._my_contract_details = {}
         self._my_historic_data_dict = {}
