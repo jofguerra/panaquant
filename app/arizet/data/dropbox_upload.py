@@ -20,8 +20,14 @@ class TransferData:
 
         with open(file_from, 'rb') as f:
             arizet_path = '/Apps/arizet_data/'
-            dbx.files_delete(arizet_path + file_to)
-            dbx.files_upload(f.read(), arizet_path + file_to)
+            try:
+                dbx.files_delete(arizet_path + file_to)
+            except:
+                print('Can not delete file')
+            try:
+                dbx.files_upload(f.read(), arizet_path + file_to)
+            except:
+                print('Can not upload file')
 
 
 def save_arizet_file_to_dropbox(date, transfer_data):  # For manual input, enter date here
@@ -38,6 +44,7 @@ def save_arizet_file_to_dropbox(date, transfer_data):  # For manual input, enter
             df = json_normalize(table['Data']['Stocks'])
             print(df)
             df['price'] = df['price'].replace('[\$,]', '', regex=True).astype(float)
+            df['name'] = df['name'].str.replace(',', '')
             file_name = 'Arizet_{}_{}.csv'.format(confidence_percentage, date)
             file_path = os.path.join(save_dir, file_name)
             df.to_csv(file_path)
@@ -61,6 +68,7 @@ def create_orders(df):
     df_filtered = df_filtered.loc[df_filtered['trades'] >= 3]
     df_filtered = df_filtered.loc[df_filtered['frequency'] > 5]
     df_filtered['amount'] = 3000 / df['price']
+
     stocks = set(zip(
         df_filtered['ticker'],
         df_filtered['signal'],
@@ -68,17 +76,27 @@ def create_orders(df):
         df_filtered['price']
     ))
 
-    rows = []
-    for stock in stocks:
-        rows.append({
+    stock_data_dict = [
+        {
             'ticker': stock[0],
             'signal': stock[1],
-            'quantity': round(stock[2], 2),
+            'quantity': stock[2],
+            'price': stock[3]
+        }
+        for stock in stocks
+    ]
+
+    rows = []
+    for stock in stock_data_dict:
+        rows.append({
+            'ticker': stock['ticker'],
+            'signal': stock['signal'],
+            'quantity': round(stock['quantity'], 2),
             'order_type': 'TRAIL',
-            'stop_loss': 750,
-            'take_profit': 320,
-            'stop_price': stock[3] + 1,
-            'trail_amount': 2
+            'stop_loss': stock['price'] - 750 if stock['signal'] == 'BUY' else stock['price'] + 750,
+            'take_profit': stock['price'] + 320 if stock['signal'] == 'BUY' else stock['price'] - 320,
+            'stop_price': stock['price'] + 1 if stock['signal'] == 'BUY' else stock['price'] - 1,
+            'trail_amount': round(stock['price'] * 0.01, 2)
         })
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -88,7 +106,7 @@ def create_orders(df):
 
 
 if __name__ == '__main__':
-    access_token = '9qwulo5PcvAAAAAAAAAAoVP-hIcQXBG_ncbFywkcvj4wG-c94HmjKO2m8WVi3syT'
+    access_token = '9qwulo5PcvAAAAAAAAAAqQ1FOrcuIuphZxuIs4TQbJhTrWdMdbmFFtyFFVFh2bTR'
     trasfer_data = TransferData(access_token)
     data_date = pd.tseries.offsets.BusinessDay(-1)
     ts = dt.datetime.today()

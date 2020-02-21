@@ -333,7 +333,7 @@ class TestApp(TestWrapper, TestClient):
 
     def get_orders(self):
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        full_file_path = os.path.join(dir_path, 'data', 'orders', 'orders.csv')
+        full_file_path = os.path.join(dir_path, 'arizet', 'data', 'orders', 'orders.csv')
         order_df = pd.read_csv(full_file_path)
         return order_df, order_df['order_type'].iloc[0]
 
