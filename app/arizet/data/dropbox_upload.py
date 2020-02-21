@@ -88,7 +88,7 @@ def create_orders(df):
 
 
 if __name__ == '__main__':
-    access_token = '9qwulo5PcvAAAAAAAAAAoVP-hIcQXBG_ncbFywkcvj4wG-c94HmjKO2m8WVi3syT'
+    access_token = ''
     trasfer_data = TransferData(access_token)
     data_date = pd.tseries.offsets.BusinessDay(-1)
     ts = dt.datetime.today()
